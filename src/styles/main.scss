@@ -1,1 +1,92 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+h1 {
+  font-size: 4.8em;
+}
+
+
+html, body {
+
+  font-family: 'Maven Pro', sans-serif !important;
+}
+
+hr.style-one {
+  border-top: 2px solid #f5f5f5;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.pink {
+  color: #ee2a7b !important;
+}
+
+.mat-raised-button {
+  padding: 5px 30px !important;
+  span {
+    font-size: 16px;
+  }
+}
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+  background: rgba(0,0,0,0.5);
+  -webkit-border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+
+@media (max-width: 1600px) {
+  
+
+}
+
+@media (max-width: 1400px) {
+  
+  h1 {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 1200px) {
+  
+
+}
+
+@media (max-width: 900px) {
+   
+  h1 {
+    font-size: 3.4em;
+  }
+
+}
+
+@media (max-width: 700px) {
+  
+   
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  
+
+}

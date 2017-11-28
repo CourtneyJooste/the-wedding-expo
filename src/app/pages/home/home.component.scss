@@ -1,0 +1,42 @@
+.upcoming-expos {
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    color: white;
+    text-align: center;
+}
+
+.upcoming-inner {
+    padding-top: 80px;
+    // padding-left: 50px;
+    // padding-right: 0px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pink-box{
+    border: 1px solid #ee2a7b;
+    border-radius: 2px;
+    padding: 30px 10px 30px 10px;
+    margin-bottom: 15px;
+    h3{
+        margin-top: 15px;
+    }
+    h4{
+        margin-top: 15px;
+        color: #a0a0a0
+    }
+    h5 {
+        font-size: 16px;
+    }
+}
+
+.box-inner {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.box-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

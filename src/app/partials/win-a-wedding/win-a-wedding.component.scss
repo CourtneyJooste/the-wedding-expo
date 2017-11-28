@@ -1,0 +1,50 @@
+.win-banner {
+    min-height: calc(100vh - 120px);
+    background-color: #333333;
+    background: url('./../../../assets/img/bg1.jpg') no-repeat center 20% fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.win-banner-outer {
+    min-height: calc(100vh - 120px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.win-banner-inner {
+    text-align: center;
+    padding-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+        color: white;
+        letter-spacing: 4px;
+    }
+    img {
+        width: 70%;
+        // max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.win-text {
+    padding-top: 60px;
+}
+
+.win-button {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+@media (max-width:800px) { /* small size */
+    .win-banner, .win-banner-outer  {
+        min-height: calc(100vh - 80px);
+    }
+    .win-button {
+        padding-top: 50px;
+    }
+}

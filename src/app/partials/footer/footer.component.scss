@@ -1,0 +1,30 @@
+.footer {
+    background-color: black;
+    color: #a0a0a0;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.footer-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1600px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.social-icons {
+    button {
+        border: 2px solid #ee2a7b;
+    }
+    .mat-icon-button{
+        width: 42px;
+        height: 42px;
+        line-height: 17px;
+        i {
+            font-size: 18px;
+            color: #ee2a7b;
+        }
+    }
+}
