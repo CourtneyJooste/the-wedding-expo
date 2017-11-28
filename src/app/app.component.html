@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<mat-sidenav-container>
+<mat-sidenav mode="over" #sidenav class="my-sidenav"><app-navbar-sm></app-navbar-sm></mat-sidenav>
+
+<div class="my-content">
+    <div class="hideOnMobile">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="showOnMobile">
+        <mat-toolbar color="primary" style="background-color: black" class="unselectable">
+            <div class="navbar-inner">
+                <button mat-icon-button class="navbar-icon" (click)="sidenav.open()">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <div class="navbar-button">
+                    <button mat-button style="centered">the wedding expo</button>
+                </div>
+            </div>
+        </mat-toolbar>
+    </div>
+    <div class="nav-padder">
+        <router-outlet>
+
+        </router-outlet>
+    </div>
+    <!-- <app-footer [appTitle]=app_name>
+
+    </app-footer> -->
+</div>
+
+</mat-sidenav-container>

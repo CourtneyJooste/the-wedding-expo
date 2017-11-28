@@ -1,0 +1,29 @@
+.navbar-black {
+    background-color: black;
+    height: 120px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    .navbar-items {
+        text-align: center;
+        width: 100%;
+        .navbar-item {
+            height: 40px;
+            cursor: pointer;
+            line-height: 40px;
+            display:inline-block;
+        }
+        .navbar-item a {
+            margin: 15px;
+            padding-top: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            &.active{
+                transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                color: #EE2A7B;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #EE2A7B;
+            }
+        }
+    }
+}
