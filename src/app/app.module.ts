@@ -10,7 +10,7 @@ import {HomeComponent} from './pages/home/home.component';
 import {LoginComponent} from './pages/login/login.component';
 import {MaterialModule} from "./modules/material.module";
 import {CovalentModule} from "./modules/covalent.module";
-
+import { NgxImageGalleryModule } from 'ngx-image-gallery';
 import {DataService} from "./services/data.service";
 import { NavbarComponent } from './partials/navbar/navbar.component';
 import { VisitExpoComponent } from './components/visit-expo/visit-expo.component';
@@ -45,6 +45,7 @@ import { WinAWeddingComponent } from './partials/win-a-wedding/win-a-wedding.com
         HttpModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        NgxImageGalleryModule,
         MaterialModule,
         CovalentModule
     ],

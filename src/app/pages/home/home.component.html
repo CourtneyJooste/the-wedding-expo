@@ -68,5 +68,30 @@
                 </div>
             </div>
         </div>
-    </div><br><br><br><br>
+    </div>
+    <div class="home-gallery">
+        <div class="container-fluid">
+            <div class="home-gallery-inner" *ngIf="images_loaded">
+                <h1>gallery</h1>
+                <br><hr class="style-one">
+                <div class="gallery-images">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6" *ngFor="let image of image_thumbs">
+                            <a (click)="imageClicked(image.id)"><div class="image-block" [ngStyle]="giefImages(image.url)">
+
+                            </div></a>
+                        </div>
+                    </div>
+                </div>
+                <ngx-image-gallery 
+                    [images]="images"
+                    [conf]="conf"
+                ></ngx-image-gallery>
+                <div class="gallery-view-more">
+                    <button mat-raised-button color="primary" routerLink="/gallery">view more</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>
