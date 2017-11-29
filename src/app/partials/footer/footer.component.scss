@@ -15,7 +15,20 @@
 }
 
 .social-icons {
-    button {
+    a{
+        color: #ee2a7b !important;
+        text-decoration: none !important;
+    }
+    .s-i {
+        cursor: pointer;
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        line-height: 17px;
+        padding: 10px;
+        text-align: center;
+        min-width: 0;
+        border-radius: 50%;
         border: 2px solid #ee2a7b;
     }
     .mat-icon-button{
