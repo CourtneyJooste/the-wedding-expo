@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import {OwlModule} from 'ng2-owl-carousel';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
@@ -51,6 +52,7 @@ import { UpcomingExposComponent } from './partials/upcoming-expos/upcoming-expos
         NgxImageGalleryModule,
         MaterialModule,
         CovalentModule,
+        OwlModule,
         MarkdownToHtmlModule.forRoot()
     ],
     providers: [DataService],

@@ -1,5 +1,140 @@
-<div class="empty-page animated fadeIn">
-  <div class="centered-content">
-    <h1>coming soon!</h1>
+<div class="animated fadeIn">
+  <app-win-a-wedding></app-win-a-wedding>
+  <div class="faq-container">
+    <div class="container">
+      <div class="faq-inner">
+        <h1>frequently asked questions</h1>
+        <br><hr class="style-one">
+        <div class="faq-lower">
+          <div class="row faq-row" *ngFor="let q of questions">
+            <div class="col-sm-1 pink">{{q.title}}</div>
+            <div class="col-sm-11"><b>{{q.question}}</b><br>{{q.answer}}</div>
+          </div>
+        </div>
+        <div class="faq-bottom">
+            <button mat-raised-button color="primary">apply to exhibit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials">
+    <div class="container">
+        <h1>testimonials</h1>
+        <div class="testimonials-inner">
+            <owl-carousel
+            [options]="testimonialOptions"
+            [items]="testimonials"
+            [carouselClasses]="['owl-theme', 'sliding']">
+            <div class="item" *ngFor="let t of testimonials;">
+              <div class="item-outer">
+                <div class="testimonial-item">
+                  <div class="testimonial-text">
+                      <p>
+                        {{t.text}}
+                      </p>
+                  </div>
+                  <div class="t-circle-container">
+                    <div class="t-circle-outer">
+                        <div class="t-circle" [ngStyle]="getBg(t.url)">
+                        </div>
+                    </div>
+                  </div>
+                  <h4>{{t.name}}</h4>
+                  <h6>{{t.title}}</h6>
+                </div>
+              </div>
+            </div>
+          </owl-carousel>
+        </div>
+    </div>
+  </div>
+  <div class="rates">
+      <div class="container-fluid">
+          <h1>rates and plans</h1>
+          <br><hr class="style-one">
+          <div class="rates-inner">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6" *ngFor="let plan of plans">
+                      <div class="pink-box">
+                          <h3 class="pink"><b>{{plan.name}}</b></h3>
+                          <h4>{{plan.location}}</h4>
+                          <h3>{{plan.dates}}</h3>
+                          <div class="box-inner">
+                              <h5><markdown-to-html [data]="plan.details"></markdown-to-html></h5>
+                          </div>
+                          <div class="box-button">
+                              <button mat-raised-button color="primary">i want more info</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="apply-container">
+    <div class="container">
+        <h1>apply to exhibit</h1>
+        <div class="apply-inner">
+          <form>
+              <mat-form-field class="full-width">
+                <input matInput placeholder="full name" value="" [(ngModel)]="name" name="fn">
+              </mat-form-field>   
+              
+              <mat-form-field class="full-width">
+                <input matInput placeholder="contact number" value="" [(ngModel)]="contact" name="cn">
+              </mat-form-field>  
+                
+              <mat-form-field class="full-width">
+                <input matInput placeholder="email address" value="" [(ngModel)]="email" name="ea">
+              </mat-form-field>  
+                
+              <mat-form-field class="full-width">
+                <input matInput placeholder="company name" value="" [(ngModel)]="company" name="cname">
+              </mat-form-field>  
+
+              <mat-form-field class="full-width">
+                <mat-select placeholder="which category best describes your business" [(ngModel)]="selectedCat" name="cat">
+                  <mat-option *ngFor="let category of categories" [value]="category">
+                    {{ category }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-select placeholder="select expo you are interested in" [(ngModel)]="selectedExpo" name="expo">
+                  <mat-option *ngFor="let expo of expos" [value]="expo">
+                    {{ expo }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <div class="apply-slider">
+                  <p>are you interested in booking at more than one expo?</p>
+                  <mat-slide-toggle
+                    class="apply-margin"
+                    color="primary"
+                    checked="false"
+                    [(ngModel)]="bookMore"
+                    name="as">
+                  <span *ngIf="bookMore">Yes</span>
+                  <span *ngIf="!bookMore">No</span>
+                </mat-slide-toggle>
+              </div>
+              <div class="opt-out">
+                <div class="row">
+                  <div class="col-xs-1" style="padding-top: 2px;">
+                      <mat-checkbox color="primary" [(ngModel)]="optOut" name="oo"></mat-checkbox>
+                  </div>
+                  <div class="col-xs-11" style="padding-left: 0;">
+                      opt out of receiving emails and newsletters
+                  </div>
+                </div>
+              </div>
+              <div class="apply-button">
+                  <button mat-raised-button color="primary">apply</button>
+              </div>
+          </form>
+        </div>
+    </div>
   </div>
 </div>
