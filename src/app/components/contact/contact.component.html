@@ -1,5 +1,56 @@
-<div class="empty-page animated fadeIn">
-    <div class="centered-content">
-      <h1>coming soon!</h1>
+<div class="animated fadeIn">
+  <app-win-a-wedding></app-win-a-wedding>
+  <div class="contact-container">
+    <div class="container-fluid">
+      <h1>send us a message</h1>
+      <div class="contact-inner">
+        <form>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="full name" value="" [(ngModel)]="name" name="fn">
+          </mat-form-field>   
+          
+          <mat-form-field class="full-width">
+            <input matInput placeholder="contact number" value="" [(ngModel)]="contact" name="cn">
+          </mat-form-field>  
+            
+          <mat-form-field class="full-width">
+            <input matInput placeholder="email address" value="" [(ngModel)]="email" name="ea">
+          </mat-form-field>  
+
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="message" [(ngModel)]="message" name="msg">{{message}}</textarea>
+          </mat-form-field>
+            
+          <div class="contact-button">
+              <button mat-raised-button color="primary">send</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
+  <div class="contact-container">
+      <div class="container-fluid">
+          <h1>contact numbers</h1>
+          <br><hr class="style-one">
+          <div class="numbers-inner">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6" *ngFor="let c of contacts">
+                      <div class="pink-box">
+                          <h3><b>{{c.name}}</b></h3>
+                          <h4>{{c.title}}</h4>
+                          <div class="box-inner">
+                              <h5>
+                                <a href="mailto:{{c.email}}">{{c.email}}</a><br><br>
+                                <a href="tel:{{c.number}}">{{c.number}}</a>                              
+                              </h5>
+                          </div>
+                          <div class="box-button">
+                              <a href="mailto:{{c.email}}"><button mat-raised-button color="primary">email</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
