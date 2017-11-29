@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     {
       url: "assets/img/galleries/home/three.jpg", 
       title: 'three',
-      id: 3,
+      id: 2,
     }
   ];
   images_loaded: boolean = false;

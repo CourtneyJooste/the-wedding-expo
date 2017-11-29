@@ -1,6 +1,7 @@
 html, body, material-app, mat-sidenav-container, .my-content {
     margin: 0;
     width: 100%;
+    // background: #222;
     background: linear-gradient(45deg, white, silver);
     min-height: 100%;
   
@@ -39,7 +40,7 @@ html, body, material-app, mat-sidenav-container, .my-content {
   }
 
 
-@media (max-width:800px) { /* small size */
+@media (max-width:870px) { /* small size */
     .showOnMobile {
         display: block;
     }

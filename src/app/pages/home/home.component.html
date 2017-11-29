@@ -1,4 +1,4 @@
-<div class="">
+<div class="animated fadeIn">
     <!-- <div class="jumbotron">
         <div class="container">
             <h1>Home Page</h1>
@@ -69,8 +69,51 @@
             </div>
         </div>
     </div>
+    <div class="about-us">
+        <div class="container">
+            <div class="about-inner">
+                <h1>about us</h1>
+                <br><hr class="style-one">
+                <div class="about-lower">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Ut sagittis lorem eros, in blandit augue cursus eu. Fusce sit amet dapibus velit, sed hendrerit urna. 
+                            Morbi dolor nisl, feugiat fermentum commodo ac, euismod vitae tellus. 
+                            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                            Maecenas fermentum ante lobortis nisi tincidunt eleifend. Aliquam erat volutpat. 
+                            Fusce tortor nulla, scelerisque eget mi in, congue malesuada sem. 
+                            Aenean quis nunc mollis, porttitor augue in, dignissim felis. Vestibulum vitae elit feugiat, porttitor felis quis, porttitor risus. 
+                            Duis arcu ipsum, placerat nec turpis sed, finibus imperdiet neque. 
+                            Nam vulputate vel libero sit amet interdum. Donec consequat nisi dui, non tincidunt ipsum vestibulum et.<br><br>
+                            Maecenas ultrices sapien eget sem bibendum finibus ac nec est. 
+                            Donec facilisis erat diam, in sollicitudin libero pretium in. Suspendisse dapibus vestibulum tincidunt. Duis consequat aliquam metus eu faucibus. 
+                            Duis tempus urna sit amet dui sodales commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nam lacus nunc, porta ac enim quis, vestibulum elementum nulla.<br><br>
+                            Maecenas ultrices sapien eget sem bibendum finibus ac nec est. 
+                            Donec facilisis erat diam, in sollicitudin libero pretium in. Suspendisse dapibus vestibulum tincidunt. Duis consequat aliquam metus eu faucibus. 
+                            Duis tempus urna sit amet dui sodales commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nam lacus nunc, porta ac enim quis, vestibulum elementum nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nam lacus nunc, porta ac enim quis, vestibulum elementum nulla.</p>
+                            <div class="about-button">
+                                <button mat-raised-button color="primary" routerLink="/apply">apply to exhibit</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-image" [ngStyle]="giefImages('assets/img/person1.jpg')">
+
+                            </div>
+                            <div class="about-image" [ngStyle]="giefImages('assets/img/person2.jpg')">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="home-gallery">
-        <div class="container-fluid">
+        <div class="container">
             <div class="home-gallery-inner" *ngIf="images_loaded">
                 <h1>gallery</h1>
                 <br><hr class="style-one">
