@@ -93,7 +93,7 @@
               </mat-form-field>  
 
               <mat-form-field class="full-width">
-                <mat-select placeholder="which category best describes your business" [(ngModel)]="selectedCat" name="cat">
+                <mat-select placeholder="which category best describes your business" [(ngModel)]="selectedCategory" name="cat">
                   <mat-option *ngFor="let category of categories" [value]="category">
                     {{ category }}
                   </mat-option>
