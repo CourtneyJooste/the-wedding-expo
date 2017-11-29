@@ -24,17 +24,23 @@ export class HomeComponent implements OnInit {
     {
       url: "assets/img/galleries/home/one.jpg", 
       title: 'one',
+      category: "rings",
       id: 0,
     },
     {
       url: "assets/img/galleries/home/two.jpg", 
       title: 'two',
+      category: "dresses",
       id: 1,
     },
     {
       url: "assets/img/galleries/home/three.jpg", 
       title: 'three',
+      category: "stuff",
       id: 2,
+      sponsored: {
+        name: "Alicia Photography"
+      }
     }
   ];
   images_loaded: boolean = false;
