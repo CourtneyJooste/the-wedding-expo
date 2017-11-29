@@ -3,6 +3,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
@@ -22,6 +23,7 @@ import { NavbarSmComponent } from './partials/navbar-sm/navbar-sm.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { WinAWeddingComponent } from './partials/win-a-wedding/win-a-wedding.component';
+import { UpcomingExposComponent } from './partials/upcoming-expos/upcoming-expos.component';
 
 @NgModule({
     declarations: [
@@ -37,7 +39,8 @@ import { WinAWeddingComponent } from './partials/win-a-wedding/win-a-wedding.com
         NavbarSmComponent,
         GalleryComponent,
         FooterComponent,
-        WinAWeddingComponent
+        WinAWeddingComponent,
+        UpcomingExposComponent
     ],
     imports: [
         BrowserModule,
@@ -47,7 +50,8 @@ import { WinAWeddingComponent } from './partials/win-a-wedding/win-a-wedding.com
         BrowserAnimationsModule,
         NgxImageGalleryModule,
         MaterialModule,
-        CovalentModule
+        CovalentModule,
+        MarkdownToHtmlModule.forRoot()
     ],
     providers: [DataService],
     bootstrap: [AppComponent]

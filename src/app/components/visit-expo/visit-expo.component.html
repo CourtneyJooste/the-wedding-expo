@@ -1,5 +1,26 @@
-<div class="empty-page animated fadeIn">
-    <div class="centered-content">
-      <h1>coming soon!</h1>
+<div class="animated fadeIn">
+
+    <app-win-a-wedding></app-win-a-wedding>
+    <div class="faq-container">
+      <div class="container">
+        <div class="faq-inner">
+          <h1>frequently asked questions</h1>
+          <br><hr class="style-one">
+          <div class="faq-lower">
+            <div class="row faq-row" *ngFor="let q of questions">
+              <div class="col-sm-1 pink">{{q.title}}</div>
+              <div class="col-sm-11"><b>{{q.question}}</b><br>{{q.answer}}</div>
+            </div>
+          </div>
+          <div class="faq-bottom">
+              <button mat-raised-button color="primary" routerLink="/contact">contact us</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <app-upcoming-expos></app-upcoming-expos>
+    <div class="exhibitors">
+      <h1>exhibitors</h1>
+      <div style="height: 500px"></div>
+    </div>
+</div>
