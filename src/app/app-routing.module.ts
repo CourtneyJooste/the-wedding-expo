@@ -15,10 +15,10 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 const routes: Routes = [
 
     // Default path
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    // {path: '', redirectTo: 'home', pathMatch: 'full'},
 
     // {path: 'login', component: LoginComponent},
-    {path: 'home', component: HomeComponent},
+    {path: '', component: HomeComponent},
     {path: 'visit-expo', component: VisitExpoComponent},
     {path: 'apply', component: ApplyComponent},
     {path: 'gallery', component: GalleryComponent},

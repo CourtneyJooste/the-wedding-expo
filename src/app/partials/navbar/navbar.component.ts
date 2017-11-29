@@ -10,7 +10,7 @@ declare var $: any;
 export class NavbarComponent implements OnInit {
 
   navbar_items: any[] = [
-    {name: "home", class:"active", link: "/home"},
+    {name: "home", class:"active", link: "/"},
     {name: "visit expo", class:"", link: "/visit-expo"},
     {name: "apply to exhibit", class:"", link: "/apply"},
     {name: "gallery", class:"", link: "/gallery"},
@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   ]
 
   constructor(private router: Router) {
-    this.changePage(this.router.url); 
+    // this.changePage(this.router.url); 
     this.router.events.subscribe((event) => {
       // console.log(event);
       let _event = event as any;
@@ -38,9 +38,6 @@ export class NavbarComponent implements OnInit {
   }
 
   changePage(item) {
-    if(item === '/'){
-      item = {name: "home", class:"active", link: "/home"};
-    }
     for(let i of this.navbar_items) {
       if(i.name !== item.name){
         i.class = "";
