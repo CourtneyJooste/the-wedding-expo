@@ -53,7 +53,8 @@ export class ContactComponent implements OnInit {
 
   
 
-  sendMail() {
+  sendMail($event) {
+    $event.preventDefault;
     if(!this.sending){
       try {
         emailjs.init("user_kAMMKmB2yFXwzKL71IuH4");

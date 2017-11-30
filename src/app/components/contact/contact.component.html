@@ -26,7 +26,7 @@
               #captchaRef="reCaptcha"
               siteKey="6LeMGjsUAAAAAOjbezvTeglDNIQsAaX8iL5U2rQA"
               size="invisible"
-              (resolved)="sendMail()"
+              (resolved)="$event && sendMail($event)"
             ></re-captcha>
               <button mat-raised-button color="primary" (click)="submit()" [disabled]="sending">
                 <span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> send

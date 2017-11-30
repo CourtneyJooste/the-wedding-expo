@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 declare var emailjs: any;
 declare var swal:any;
@@ -10,6 +10,8 @@ declare var $: any;
   styleUrls: ['./apply.component.scss']
 })
 export class ApplyComponent implements OnInit {
+
+  @ViewChild ('captchaRef') captchaRef: any;
 
   sending: boolean = false;
 
@@ -123,76 +125,11 @@ export class ApplyComponent implements OnInit {
     }
     return {};
   }
-  sendMail() {
-    let email = this.email;
-    let name = this.name;
-    let cell = this.contact;
-    let company = this.company;
-    let selectedCategory = this.selectedCategory;
-    let selectedExpo = this.selectedExpo;
-    let interested = "More than one expo: ";
-    if(this.bookMore) {
-      interested += "Yes";
-    } else {
-      interested += "No";
-    }
-    let opted = "Opted Out: ";
-    if(this.optOut) {
-      opted += "Yes";
-    } else {
-      opted += "No";
-    }
 
-    console.log("TESTING");
-    emailjs.init("user_kAMMKmB2yFXwzKL71IuH4");
-    let that = this;
-
-    if(name !== "" && cell !== "" && company !== "" && selectedCategory !== "" && selectedExpo !== ""){
-      if(that.validateEmail(email)){
-        that.sending = true;
-        console.log("WE MADE IT THIS FAR");
-        
-          let mail_options = {
-            title: "Exhibitor Application from: " + name,
-            subtitle: "A new application has been submitted",
-            subject: "New Exhibitor Application",
-            info: "Applicant Information:",
-            name,
-            email,
-            cell,
-            company: "Company: " + company,
-            category: "Category: " + selectedCategory,
-            expo: "Expo: " + selectedExpo,
-            interested,
-            opted
-          };
-          emailjs.send("mailjet", "twe", mail_options)
-          .then(function(response) {
-            
-             that.email = '';
-             that.name = '';
-             that.contact = '';
-             that.company = '';
-             that.selectedCategory = '';
-             that.selectedExpo = '';
-             that.sending = false;
-             console.log("SENT");
-             swal(
-              'Application Sent!',
-              'We will be in contact soon :)',
-              'success'
-            )
-             
-          }, function(err) {
-             console.log(err);
-             swal(
-              'Oops...',
-              'Something went wrong, please try again',
-              'error'
-            )
-             that.sending = false;
-             
-          });
+  submit(){
+    if(this.name !== "" && this.contact !== "" && this.company !== "" && this.selectedCategory !== "" && this.selectedExpo !== ""){
+      if(this.validateEmail(this.email)){
+        this.captchaRef.execute();  
       } else {
         console.log("WAT");
         swal(
@@ -200,8 +137,7 @@ export class ApplyComponent implements OnInit {
           'Please enter a valid email address',
           'error'
         )
-      }
-      
+      }      
     } else {
       console.log("WAT");
       swal(
@@ -209,6 +145,76 @@ export class ApplyComponent implements OnInit {
         'Please fill in all the fields',
         'error'
       )
+    }
+  }
+  
+  sendMail($event) {
+    $event.preventDefault;
+    if(!this.sending){
+      let email = this.email;
+      let name = this.name;
+      let cell = this.contact;
+      let company = this.company;
+      let selectedCategory = this.selectedCategory;
+      let selectedExpo = this.selectedExpo;
+      let interested = "More than one expo: ";
+      if(this.bookMore) {
+        interested += "Yes";
+      } else {
+        interested += "No";
+      }
+      let opted = "Opted Out: ";
+      if(this.optOut) {
+        opted += "Yes";
+      } else {
+        opted += "No";
+      }
+
+      try{
+        emailjs.init("user_kAMMKmB2yFXwzKL71IuH4");
+      } catch(ex) {}
+      let that = this;
+      that.sending = true;
+      
+      let mail_options = {
+        title: "Exhibitor Application from: " + name,
+        subtitle: "A new application has been submitted",
+        subject: "New Exhibitor Application",
+        info: "Applicant Information:",
+        name,
+        email,
+        cell,
+        company: "Company: " + company,
+        category: "Category: " + selectedCategory,
+        expo: "Expo: " + selectedExpo,
+        interested,
+        opted
+      };
+      emailjs.send("mailjet", "twe", mail_options)
+      .then(function(response) {
+        
+        that.email = '';
+        that.name = '';
+        that.contact = '';
+        that.company = '';
+        that.selectedCategory = '';
+        that.selectedExpo = '';
+        that.sending = false;
+        console.log("SENT");
+        swal(
+          'Application Sent!',
+          'We will be in contact soon :)',
+          'success'
+        )        
+      }, function(err) {
+        console.log(err);
+        swal(
+          'Oops...',
+          'Something went wrong, please try again',
+          'error'
+        )
+        that.sending = false;        
+      });        
     }
   }
 
