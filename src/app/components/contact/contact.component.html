@@ -28,7 +28,7 @@
               size="invisible"
               (resolved)="sendMail()"
             ></re-captcha>
-              <button mat-raised-button color="primary" (click)="captchaRef.execute()" [disabled]="sending">
+              <button mat-raised-button color="primary" (click)="submit()" [disabled]="sending">
                 <span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> send
               </button>
           </div>

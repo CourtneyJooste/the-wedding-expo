@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 declare var emailjs: any;
 declare var swal:any;
@@ -10,6 +10,8 @@ declare var $: any;
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
+  @ViewChild ('captchaRef') captchaRef: any;
 
   name: String = '';
   contact: String = '';
@@ -29,72 +31,69 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendMail() {
-    if(!this.sending){
-      var email = this.email;
-      var name = this.name;
-      var cell = this.contact;
-      var msg = this.message;
-      console.log("TESTING");
-      emailjs.init("user_kAMMKmB2yFXwzKL71IuH4");
-      let that = this;
-
-      if(name !== "" && cell !== "" && msg !== ""){
-        if(that.validateEmail(email)){
-          that.sending = true;
-          console.log("WE MADE IT THIS FAR");
-          
-            let mail_options = {
-              title: "Message Enquiry from: " + name,
-              subject: "New Message Enquiry",
-              info: "Other Information:",
-              name,
-              email,
-              cell,
-              "subtitle": msg,
-            };
-            emailjs.send("mailjet", "twe", mail_options)
-            .then(function(response) {
-              
-               that.email = '';
-               that.name = '';
-               that.contact = '';
-               that.message = '';
-               that.sending = false;
-               console.log("SENT");
-               swal(
-                'Message Sent!',
-                'We will be in contact soon :)',
-                'success'
-              )
-               
-            }, function(err) {
-               console.log(err);
-               swal(
-                'Oops...',
-                'Something went wrong, please try again',
-                'error'
-              )
-               that.sending = false;
-               
-            });
-        } else {
-          console.log("WAT");
-          swal(
-            'Cannot Send Message',
-            'Please enter a valid email address',
-            'error'
-          )
-        }
-        
+  submit() {
+    if(this.name !== "" && this.contact !== "" && this.message !== ""){
+      if(this.validateEmail(this.email)){
+        this.captchaRef.execute();      
       } else {
-        console.log("WAT");
         swal(
           'Cannot Send Message',
-          'Please fill in all the fields',
+          'Please enter a valid email address',
           'error'
         )
-      }
+      }      
+    } else {
+      swal(
+        'Cannot Send Message',
+        'Please fill in all the fields',
+        'error'
+      )
+    }
+  }
+
+  
+
+  sendMail() {
+    if(!this.sending){
+      try {
+        emailjs.init("user_kAMMKmB2yFXwzKL71IuH4");
+      } catch(ex){}
+      let email = this.email;
+      let name = this.name;
+      let cell = this.contact;
+      let msg = this.message;
+      let that = this;
+      that.sending = true;
+
+      let mail_options = {
+        title: "Message Enquiry from: " + name,
+        subject: "New Message Enquiry",
+        info: "Other Information:",
+        name,
+        email,
+        cell,
+        "subtitle": msg,
+      };
+      emailjs.send("mailjet", "twe", mail_options)
+        .then(response => {        
+          that.email = '';
+          that.name = '';
+          that.contact = '';
+          that.message = '';
+          that.sending = false;
+          swal(
+            'Message Sent!',
+            'We will be in contact soon :)',
+            'success'
+          )          
+      }, err => {
+          swal(
+            'Oops...',
+            'Something went wrong, please try again',
+            'error'
+          )
+          that.sending = false;          
+      });
     }      
   }
 
