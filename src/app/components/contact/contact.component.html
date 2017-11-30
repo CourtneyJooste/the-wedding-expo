@@ -22,7 +22,15 @@
           </mat-form-field>
             
           <div class="contact-button">
-              <button mat-raised-button color="primary" (click)="sendMail()" [disabled]="sending"><span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> send</button>
+              <re-captcha
+              #captchaRef="reCaptcha"
+              siteKey="6LeMGjsUAAAAAOjbezvTeglDNIQsAaX8iL5U2rQA"
+              size="invisible"
+              (resolved)="sendMail()"
+            ></re-captcha>
+              <button mat-raised-button color="primary" (click)="captchaRef.execute()" [disabled]="sending">
+                <span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> send
+              </button>
           </div>
         </form>
       </div>

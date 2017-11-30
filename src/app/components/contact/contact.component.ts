@@ -30,6 +30,7 @@ export class ContactComponent implements OnInit {
   }
 
   sendMail() {
+    if(!this.sending){
       var email = this.email;
       var name = this.name;
       var cell = this.contact;
@@ -94,6 +95,7 @@ export class ContactComponent implements OnInit {
           'error'
         )
       }
+    }      
   }
 
   validateEmail(email) {
