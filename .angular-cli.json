@@ -23,9 +23,12 @@
                 "./../node_modules/@covalent/core/common/platform.scss",
                 "./styles/covalent-theming.scss",
                 "./../node_modules/font-awesome/css/font-awesome.css",
+                "./../node_modules/sweetalert2/dist/sweetalert2.min.css",
                 "./../node_modules/prismjs/themes/prism-okaidia.css"
             ],
-            "scripts": [],
+            "scripts": [
+                "./../node_modules/sweetalert2/dist/sweetalert2.min.js"
+            ],
             "environmentSource": "environments/environment.ts",
             "environments": {
                 "dev": "environments/environment.ts",

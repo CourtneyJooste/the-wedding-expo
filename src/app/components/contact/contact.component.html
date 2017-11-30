@@ -14,7 +14,7 @@
           </mat-form-field>  
             
           <mat-form-field class="full-width">
-            <input matInput placeholder="email address" value="" [(ngModel)]="email" name="ea">
+            <input matInput type="email" placeholder="email address" value="" [(ngModel)]="email" name="ea">
           </mat-form-field>  
 
           <mat-form-field class="full-width">
@@ -22,7 +22,7 @@
           </mat-form-field>
             
           <div class="contact-button">
-              <button mat-raised-button color="primary">send</button>
+              <button mat-raised-button color="primary" (click)="sendMail()" [disabled]="sending"><span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> send</button>
           </div>
         </form>
       </div>
