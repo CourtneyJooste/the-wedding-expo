@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import {OwlModule} from 'ng2-owl-carousel';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
@@ -53,6 +54,7 @@ import { UpcomingExposComponent } from './partials/upcoming-expos/upcoming-expos
         MaterialModule,
         CovalentModule,
         OwlModule,
+        RecaptchaModule.forRoot(),
         MarkdownToHtmlModule.forRoot()
     ],
     providers: [DataService],
