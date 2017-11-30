@@ -137,7 +137,7 @@
                   size="invisible"
                   (resolved)="$event && sendMail($event)"
                 ></re-captcha>
-                  <button mat-raised-button color="primary" [disabled]="sending" (click)="sumbit()">
+                  <button mat-raised-button color="primary" [disabled]="sending" (click)="submit()">
                     <span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> apply
                   </button>
               </div>
