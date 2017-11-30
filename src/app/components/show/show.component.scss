@@ -1,0 +1,180 @@
+.show-banner {
+    min-height: calc(100vh - 120px);
+    background-color: #333333;
+    background: url('./../../../assets/img/wedding-expo.jpg') no-repeat center 20% fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.show-banner-outer {
+    min-height: calc(100vh - 120px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.show-banner-inner {
+    text-align: center;
+    padding-top: 150px;
+    max-width: 800px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: white;
+    letter-spacing: 4px;
+
+    h1 {
+        font-size: 5em;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    h3 {
+        font-size: 3.5em;
+    }
+    img {
+        width: 70%;
+        // max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.show-text {
+    padding-top: 60px;
+}
+
+
+.workshops {
+    background-color: white;
+    // background-color: #2d2d2d; //:( :(
+    padding-top: 100px;
+    padding-bottom: 120px;
+    color: black;
+    text-align: center;
+}
+
+.workshops-inner {
+    padding-top: 40px;
+    // padding-left: 50px;
+    // padding-right: 0px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ws-text {
+    padding-top: 10px;
+    font-size: 16px;
+    color: rgb(90,90,90);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.exhibitor-details {
+    padding: 40px 10px 60px 10px;
+    max-width: 600px;
+    margin: 0 auto;
+
+    img {
+        width: 500px;
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .inner-text {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        p{
+            font-size: 16px;
+            color: rgb(90,90,90);
+        }
+
+    }
+}
+
+.sponsors {
+    background-color: white;
+    // background-color: #2d2d2d; //:( :(
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: black;
+    text-align: center;
+}
+
+.sponsors-inner {
+    padding-top: 60px;
+    // padding-left: 50px;
+    // padding-right: 0px;
+}
+
+.sponsor-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in;
+    }
+}
+
+@media (max-width:1000px) { /* smaller size */
+    .win-banner, .win-banner-outer  {
+        min-height: calc(100vh - 80px);
+    }
+
+    .show-banner-inner {
+        padding-top: 100px;
+        h1 {
+            font-size: 4em;
+        }
+        h2 {
+            font-size: 3em;
+        }
+        h3 {
+            font-size: 2.2em;
+        }
+    }
+}
+
+@media (max-width:875px) { /* smaller size */
+    .win-banner, .win-banner-outer  {
+        min-height: calc(100vh - 80px);
+    }
+}
+
+@media (max-width:600px) { /* smaller size */
+    
+    .show-banner-inner {
+        padding-top: 80px;
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 2.5em;
+        }
+        h3 {
+            font-size: 1.8em;
+        }
+    }
+}
+
+@media (max-width:450px) { /* smaller size */
+    
+    .show-banner-inner {
+        padding-top: 80px;
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.45em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+    }
+}

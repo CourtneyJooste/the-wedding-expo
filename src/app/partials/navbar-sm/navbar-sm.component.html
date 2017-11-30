@@ -1,7 +1,11 @@
-<button mat-button routerLink="/home">home</button><br>
-<button mat-button routerLink="/visit-expo">visit expo</button><br>
-<button mat-button routerLink="/win">win a wedding</button><br>
-<button mat-button routerLink="/apply">apply to exhibit</button><br>
-<button mat-button routerLink="/gallery">gallery</button><br>
-<button mat-button routerLink="/show">show activation</button><br>
-<button mat-button routerLink="/contact">contact us</button>
+
+<button mat-icon-button class="navbar-icon" (click)="sidenav.close()">
+    <mat-icon>clear</mat-icon>
+</button><br><hr>
+<button mat-button (click)="sidenav.close()" routerLink="/">home</button><br>
+<button mat-button (click)="sidenav.close()" routerLink="/visit-expo">visit expo</button><br>
+<button mat-button (click)="sidenav.close()" routerLink="/win">win a wedding</button><br>
+<button mat-button (click)="sidenav.close()" routerLink="/apply">apply to exhibit</button><br>
+<button mat-button (click)="sidenav.close()" routerLink="/gallery">gallery</button><br>
+<button mat-button (click)="sidenav.close()" routerLink="/show">show activation</button><br>
+<button mat-button (click)="sidenav.close()" routerLink="/contact">contact us</button>
