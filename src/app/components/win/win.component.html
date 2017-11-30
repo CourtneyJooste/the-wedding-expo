@@ -1,5 +1,78 @@
-<div class="empty-page animated fadeIn">
-  <div class="centered-content">
-    <h1>coming soon!</h1>
+<div class="animated fadeIn">
+  <div class="win-banner">
+    <div class="win-banner-outer">
+      <div class="container">
+          <div class="win-banner-inner">
+            <img src="../assets/img/twe.png">
+            <div class="win-text">
+              <h1>win a wedding</h1>
+            </div>
+          </div>  
+        </div>  
+    </div>
+  </div>
+  <div class="sponsors">
+    <div class="container">
+      <h1>sponsors</h1>
+      <div class="sponsors-inner">
+        <div class="row">
+          <div class="col-md-4 col-xs-6" *ngFor="let sponsor of sponsors">
+            <a href="{{sponsor.url}}" target="_blank"><img class="sponsor-image" src="{{sponsor.image}}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="what-win">
+    <div class="container">
+        <div class="what-win-inner">
+          <h1>what you win</h1>
+          <div class="ww-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Et tortor at risus
+              viverra adipiscing at. Quam quisque id diam vel quam elementum
+              pulvinar etiam non. Viverra aliquet eget sit amet tellus. Arcu risus quis
+              varius quam quisque id. Sed elementum tempus egestas sed sed risus
+              pretium quam.</p>
+          </div>
+          <div class="exhibitor-details" *ngFor="let exhibitor of exhibitors">
+            <img src="{{exhibitor.image}}">
+            <div class="inner-text">
+              <h3>{{exhibitor.name}}</h3>
+              <p>{{exhibitor.text}}</p>
+            </div>
+            <div class="ex-button">
+              <a target="_blank" href="{{exhibitor.url}}"><button mat-raised-button color="primary">visit website</button></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="winners">
+    <div class="container">
+      <h1>past winners</h1>
+      <div class="winners-inner">
+        <div class="row">
+          <div class="col-xs-4" *ngFor="let winner of past_winners">
+            <a (click)="selectedWinner = winner"><img src="{{winner.image}}" class="winner-image"></a>
+          </div>
+        </div>
+      </div>
+      <div class="selected-winner">
+        <div class="winner-text">
+          <p>{{selectedWinner.text}}</p>
+        </div>
+        <div class="t-circle-container">
+          <div class="t-circle-outer">
+              <div class="t-circle" [ngStyle]="getBg(selectedWinner.image)">
+              </div>
+          </div>
+        </div>
+        <h4>{{selectedWinner.names}}</h4>
+        <h6>{{selectedWinner.when}}</h6>
+      </div>
+    </div>
   </div>
 </div>

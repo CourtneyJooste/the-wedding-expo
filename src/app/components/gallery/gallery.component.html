@@ -1,5 +1,48 @@
-<div class="empty-page animated fadeIn">
-    <div class="centered-content">
-      <h1>coming soon!</h1>
+<div class="animated fadeIn">
+    <app-win-a-wedding></app-win-a-wedding>
+    
+    <div class="gallery">
+      <div class="container">
+          <h1>gallery</h1>
+          <div class="gallery-inner">
+              <mat-tab-group dynamicHeight="true" mat-stretch-tabs (selectedTabChange)="changed($event)">
+                <mat-tab *ngFor="let category of categories" [label]="category.label">
+                    <div class="gallery-images animated fadeIn" *ngIf="images_loaded">
+                      <div class="row">
+                          <div class="col-md-4 col-sm-6" *ngFor="let image of images">
+                              <a (click)="imageClicked(image.id)"><div class="image-block" [ngStyle]="giefImages(image.url)">
+                              </div></a>
+                          </div>
+                      </div>
+                    </div>
+                </mat-tab>
+                <!-- <mat-tab label="all">
+                  <h1>Some tab content</h1>
+                  <p>...</p>
+                </mat-tab>
+                <mat-tab label="category one">
+                  <h1>Some more tab content</h1>
+                  <p>...</p>
+                </mat-tab>
+                <mat-tab label="category two">
+                  <h1>Some more tab content</h1>
+                  <p>...</p>
+                </mat-tab>
+                <mat-tab label="category three">
+                  <h1>Some more tab content</h1>
+                  <p>...</p>
+                </mat-tab>
+                <mat-tab label="category four">
+                  <h1>Some more tab content</h1>
+                  <p>...</p>
+                </mat-tab> -->
+              </mat-tab-group>
+              <ngx-image-gallery 
+                  [images]="images"
+                  [conf]="conf"
+              ></ngx-image-gallery>
+          </div>
+
+      </div>
     </div>
-  </div>
+</div>
