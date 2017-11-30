@@ -200,6 +200,8 @@ export class ApplyComponent implements OnInit {
         that.selectedCategory = '';
         that.selectedExpo = '';
         that.sending = false;
+        that.optOut = false;
+        that.bookMore = false;
         console.log("SENT");
         swal(
           'Application Sent!',
