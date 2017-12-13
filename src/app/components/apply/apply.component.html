@@ -20,6 +20,7 @@
   <div class="testimonials">
     <div class="container">
         <h1>testimonials</h1>
+        <br><hr class="style-one">
         <div class="testimonials-inner">
             <owl-carousel
             [options]="testimonialOptions"
@@ -33,12 +34,12 @@
                         {{t.text}}
                       </p>
                   </div>
-                  <div class="t-circle-container">
+                  <!-- <div class="t-circle-container">
                     <div class="t-circle-outer">
                         <div class="t-circle" [ngStyle]="getBg(t.url)">
                         </div>
                     </div>
-                  </div>
+                  </div> -->
                   <h4>{{t.name}}</h4>
                   <h6>{{t.title}}</h6>
                 </div>
@@ -71,9 +72,20 @@
           </div>
       </div>
   </div>
+  <div class="stats-container">
+    <div class="container">
+      <h1>statistics</h1>
+      <br><hr class="style-one">
+      <br><br><br>
+      <div class="pink-scrawl">
+        watch this space!
+      </div>
+    </div>
+  </div>
   <div class="apply-container">
     <div class="container">
         <h1>apply to exhibit</h1>
+        <br><hr class="style-one">
         <div class="apply-inner">
           <form>
               <mat-form-field class="full-width">

@@ -1,8 +1,8 @@
 .footer {
-    background-color: rgb(255, 255, 255);
-    color: #a0a0a0;
-    padding-top: 60px;
-    padding-bottom: 50px;
+    background-color: #e2b3b7;
+    color: #fefcfc;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .footer-inner {
@@ -16,7 +16,7 @@
 
 .social-icons {
     a{
-        color: #ee2a7b !important;
+        color: #fefcfc !important;
         text-decoration: none !important;
     }
     .s-i {
@@ -29,7 +29,7 @@
         text-align: center;
         min-width: 0;
         border-radius: 50%;
-        border: 2px solid #ee2a7b;
+        border: 2px solid #fefcfc;
     }
     .mat-icon-button{
         width: 42px;
@@ -37,7 +37,7 @@
         line-height: 17px;
         i {
             font-size: 18px;
-            color: #ee2a7b;
+            color: #fefcfc;
         }
     }
 }

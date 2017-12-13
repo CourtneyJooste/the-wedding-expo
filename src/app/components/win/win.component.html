@@ -1,5 +1,5 @@
 <div class="animated fadeIn">
-  <div class="win-banner">
+  <!-- <div class="win-banner">
     <div class="win-banner-outer">
       <div class="container">
           <div class="win-banner-inner">
@@ -10,10 +10,12 @@
           </div>  
         </div>  
     </div>
-  </div>
+  </div> -->
+  <app-win-a-wedding></app-win-a-wedding>
   <div class="sponsors">
     <div class="container">
       <h1>sponsors</h1>
+      <br><hr class="style-one">
       <div class="sponsors-inner">
         <div class="row">
           <div class="col-md-4 col-xs-6" *ngFor="let sponsor of sponsors">
@@ -27,23 +29,19 @@
   <div class="what-win">
     <div class="container">
         <div class="what-win-inner">
-          <h1>what you win</h1>
+          <h1>how to win</h1>
+          <br><hr class="style-one">
           <div class="ww-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Et tortor at risus
-              viverra adipiscing at. Quam quisque id diam vel quam elementum
-              pulvinar etiam non. Viverra aliquet eget sit amet tellus. Arcu risus quis
-              varius quam quisque id. Sed elementum tempus egestas sed sed risus
-              pretium quam.</p>
+            <p>The Win a Wedding is the ultimate prize and all you have to do to win is enter at the show.  Watch this space for all the details.</p>
           </div>
           <div class="exhibitor-details" *ngFor="let exhibitor of exhibitors">
             <img src="{{exhibitor.image}}">
             <div class="inner-text">
-              <h3>{{exhibitor.name}}</h3>
+              <h4>{{exhibitor.name}}</h4>
               <p>{{exhibitor.text}}</p>
             </div>
             <div class="ex-button">
-              <a target="_blank" href="{{exhibitor.url}}"><button mat-raised-button color="primary">visit website</button></a>
+              <a target="_blank" href="{{exhibitor.url}}"><button mat-button color="primary">visit website</button></a>
             </div>
           </div>
         </div>
@@ -53,6 +51,18 @@
   <div class="winners">
     <div class="container">
       <h1>past winners</h1>
+      <br><hr class="style-one">
+      <br><br><br>
+      <div class="pink-scrawl">
+        watch this space!
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="winners">
+    <div class="container">
+      <h1>past winners</h1>
+      <br><hr class="style-one">
       <div class="winners-inner">
         <div class="row">
           <div class="col-xs-4" *ngFor="let winner of past_winners">
@@ -74,5 +84,5 @@
         <h6>{{selectedWinner.when}}</h6>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

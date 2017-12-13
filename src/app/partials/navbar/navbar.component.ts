@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
     {name: "apply to exhibit", class:"", link: "/apply"},
     {name: "gallery", class:"", link: "/gallery"},
     {name: "win a wedding", class:"", link: "/win"},
-    {name: "show activation", class:"", link: "/show"},
+    {name: "at the show", class:"", link: "/show"},
     {name: "contact us", class:"", link: "/contact"},
   ]
 

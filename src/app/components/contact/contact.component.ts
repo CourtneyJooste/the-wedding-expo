@@ -20,10 +20,12 @@ export class ContactComponent implements OnInit {
   sending: boolean = false;
 
   contacts: any[] = [
-    {name: "Fransina Morake", title: "Sales Manager", email: "frans@wedding-expo.co.za", number: "073 244 0160"},
-    {name: "Leane Joubert", title: "Sales Consultant", email: "leane@wedding-expo.co.za", number: "083 310 6787"},
-    {name: "Marylou Bawden", title: "Exhibition Manager", email: "marylou@wedding-expo.co.za", number: "082 921 9553"},
-    {name: "Janet Gericke", title: "Marketing Manager", email: "janet@wedding-expo.co.za", number: "072 357 7399"},
+    {name: "Fransina Morake", title: "Sales Manager", email: "fran@wedding-expo.co.za", number: "073 244 0160"},
+    {name: "Leane Joubert", title: "Sales Consultant", email: "leane@theweddinggroup.co.za", number: "083 310 6787"},
+    {name: "Hermione Ballinger", title: "Sales Consultant", email: "hermione@theweddinggroup.co.za", number: "078 662 1059"},
+    {name: "Marylou Bawden", title: "Exhibition Manager", email: "marylou@theweddinggroup.co.za", number: "011 788 36273"},
+    {name: "Ineke Heinsen ", title: "Marketing Manager", email: "marketing@theweddinggroup.co.za", number: "079 953 4406"},
+    {name: "Amanda Cunningham ", title: "Managing Director", email: "amanda@theweddinggroup.co.za", number: "011 788 3627"},
   ]
   
   constructor() { }

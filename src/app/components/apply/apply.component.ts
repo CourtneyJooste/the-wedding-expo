@@ -27,27 +27,27 @@ export class ApplyComponent implements OnInit {
 
   testimonials: any[] = [
     {
-      name: "Jane Doe", 
-      title: "Person of people", 
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed.",
+      name: "Rose Molteno", 
+      title: "CEO & Designer of Molteno Creations", 
+      text: "I just wanted to say thank you for all your hard work on creating a completely seamless expo! I'm so impressed at the amount of media coverage I've received, how perfectly the fashion show ran, and generally how well everything was organised. You guys did an amazing job this year, so pat yourselves on the back and please pass this on to all other crew. Thanks again and I'm looking forward to next year!",
       url: "assets/img/testimonials/person1.jpg"
     },
     {
-      name: "Jim Jones", 
-      title: "Manager of Stuff", 
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed.",
+      name: "Ian", 
+      title: "Coffee Café", 
+      text: "Thank you for everything you did right from the start. It was truly a successful opportunity and I learnt a lot in terms of exhibiting rather than trading. Thank you very much for all the advice and support. I hope to be on your team again next year.",
       url: ""
     },
     {
-      name: "Oliver Queen", 
-      title: "The green arrow", 
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed.",
+      name: "Bruce Kay", 
+      title: "Co-fouinder, Bloom Weddings", 
+      text: "As a digital wedding planning platform we (Bloom Weddings) decided to take a stand at The Wedding Expo in the hope that we could gain exposure to thousands of people in a short period of time. Our main aim was to gain a spike in users/customers on our platform. We indeed achieved our goal and more! We were pleasantly surprised at what we achieved in August 2017 and as a result have committed to all 4 shows in 2018. We found the physical presence at TWE not only helped us gain exposure, but also engaging with that amount of people helped give us the assurance that our business is very relevant and got wonderful feedback from the aspiring couples.",
       url: ""
     }
   ];
 
   testimonialOptions: any = {
-    dots: true,
+    dots: false,
     navigation: true,
     autoplay: true,
     loop: true,
@@ -66,16 +66,16 @@ export class ApplyComponent implements OnInit {
 
   plans: any[] = [
     {name: "Johannesburg", location: "Ticketpro Dome", dates: "10 & 11 march 2018", 
-    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br><br><br><b>PRICING<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</b><br><br><br>ADDITIONAL INFO<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"},
+    details: "<b>PRICING</b><br><br>dependent on size of stand"},
 
     {name: "Cape Town", location: "CTICC", dates: "9 & 10 JUNE 2018", 
-    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br><br><br><b>PRICING<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</b><br><br><br>ADDITIONAL INFO<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"},
+    details: "<b>PRICING</b><br><br>dependent on size of stand"},
 
     {name: "Durban", location: "DEC", dates: "28 & 29 JULY 2018", 
-    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br><br><br><b>PRICING<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</b><br><br><br>ADDITIONAL INFO<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"},
+    details: "<b>PRICING</b><br><br>dependent on size of stand"},
 
     {name: "Johannesburg", location: "Ticketpro Dome", dates: "25 & 26 AUG 2018", 
-    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br><br><br><b>PRICING<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</b><br><br><br>ADDITIONAL INFO<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"},
+    details: "<b>PRICING</b><br><br>dependent on size of stand"},
   ];
 
   name: String = '';

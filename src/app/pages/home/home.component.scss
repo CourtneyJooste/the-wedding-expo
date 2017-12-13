@@ -1,9 +1,9 @@
 .about-us{
 
-    background-color: rgb(255, 255, 255);
+    background-color: #e0aeb2;
     padding-top: 60px;
     padding-bottom: 100px;
-    color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
 }
 
@@ -14,7 +14,7 @@
 .about-lower {
     padding-top: 40px; 
     p{
-        color: rgb(44, 44, 44);
+        color: white;
         text-align: left;
     }
 }
@@ -35,6 +35,11 @@
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: left;
+    .mat-button {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+    }
 }
 
 .home-gallery {

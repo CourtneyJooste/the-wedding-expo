@@ -17,8 +17,8 @@ export class WinComponent implements OnInit {
   ];
 
   exhibitors: any[] = [
-    {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" },
-    {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" }   
+    {name: "Royal Elephant Hotel & Conference Centre", text: "On the banks of the Hennops River in Centurion, The Royal Elephant exemplifies tasteful North African elegance combined with exceptional attention to detail.", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" },
+    // {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" }   
   ];
 
   past_winners: any[] = [

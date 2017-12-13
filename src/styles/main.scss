@@ -24,6 +24,12 @@
 //   src: url('./../assets/vendor/fonts/Prosto-Black.ttf') format('truetype');
 //   font-weight: bolder;
 // }
+@font-face {
+  font-family: 'Hijrnotes';
+  src: url('./../assets/vendor/fonts/Hijrnotes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 h1 {
   font-size: 4.8em;
@@ -33,6 +39,14 @@ h1 {
 html, body {
   font-family: 'Prosto', sans-serif !important;
 }
+
+.pink-scrawl {
+  font-family: "Hijrnotes" !important;
+  color: #ee2a7b;
+  font-size: 84px;
+}
+
+
 $color-1: #ee2a7b;
 $color-2: adjust-hue($color-1, 40deg);
 $color-3: adjust-hue($color-1, 80deg);
@@ -242,7 +256,7 @@ hr.style-one {
   color: #ee2a7b !important;
 }
 
-.mat-raised-button {
+.mat-raised-button, .mat-button {
   padding: 5px 30px !important;
   span {
     font-size: 16px;
