@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       url: "assets/img/bliss.jpg", 
       title: 'three',
       category: "stuff",
-      id: 2,
+      id: 1,
       sponsored: {
         name: "www.blissfloralcreations.com"
       }
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
       url: "assets/img/ex-ct.jpg", 
       title: 'exhibitor stand cape town',
       category: "stands",
-      id: 1,
+      id: 2,
     }
   ];
   images_loaded: boolean = false;
