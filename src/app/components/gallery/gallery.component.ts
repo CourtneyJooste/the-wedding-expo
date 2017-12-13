@@ -36,7 +36,7 @@ export class GalleryComponent implements OnInit {
   image_thumbs: any[] = [
     {
       url: "assets/img/galleries/main/1.jpg", 
-      title: 'royal elephant hotel',
+      title: 'royal elephant hotel & conference centre',
       category: "win",
       id: 0,
     },
@@ -66,7 +66,7 @@ export class GalleryComponent implements OnInit {
     },
     {
       url: "assets/img/galleries/main/6.jpg", 
-      title: 'cake testing competition',
+      title: 'cake tasting competition',
       category: "win",
       id: 5,
     },

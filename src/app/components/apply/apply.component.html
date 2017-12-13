@@ -15,9 +15,9 @@
         <div class="faq-bottom">
             <button mat-raised-button color="primary">apply to exhibit</button>
         </div> -->
-        <div class="faq-bottom">
-            <button mat-raised-button color="primary" routerLink="/show">at the show</button>
-        </div>
+        <!-- <div class="faq-bottom">
+            <button mat-raised-button color="primary" routerLink="/#apply">apply to exhibit</button>
+        </div> -->
       </div>
     </div>
   </div>
@@ -57,6 +57,7 @@
       <div class="container-fluid">
           <h1>rates and plans</h1>
           <br><hr class="style-one">
+          <h4 style="color: #444">get in touch with us to discuss your budget and our available packages</h4>
           <div class="rates-inner">
               <div class="row">
                   <div class="col-lg-3 col-md-6" *ngFor="let plan of plans">
@@ -68,7 +69,7 @@
                               <h5><markdown-to-html [data]="plan.details"></markdown-to-html></h5>
                           </div>
                           <div class="box-button">
-                              <button mat-raised-button color="primary">i want more info</button>
+                              <a href="mailto:info@wedding-expo.co.za"><button mat-raised-button color="primary">I want more info</button></a>
                           </div>
                       </div>
                   </div>
@@ -87,7 +88,7 @@
     </div>
   </div>
   <div class="apply-container">
-    <div class="container">
+    <div class="container" id="apply">
         <h1>apply to exhibit</h1>
         <br><hr class="style-one">
         <div class="apply-inner">
