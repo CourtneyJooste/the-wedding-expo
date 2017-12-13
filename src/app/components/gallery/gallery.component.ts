@@ -41,7 +41,8 @@ export class GalleryComponent implements OnInit {
       id: 0,
     },
     {
-      url: "assets/img/contact.jpg", 
+      url: "assets/img/sponsors/tb.jpg", 
+      title: 'the boys couture',
       category: "win",
       id: 1,
     },
