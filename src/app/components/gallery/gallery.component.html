@@ -10,6 +10,28 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6" *ngFor="let image of images">
                         <a (click)="imageClicked(image.id)"><div class="image-block" [ngStyle]="giefImages(image.url)">
+                            <div *ngIf="image.title">
+                                <div *ngIf="image.sponsored" class="sp-box">
+                                    <div class="row">
+                                        <div class="col-xs-5">
+                                            <div class="sp">SPONSORED</div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <div class="sp-name"><span>{{image.sponsored.name}}</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="!image.sponsored" class="sp-box">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="image-name">{{image.title}}</div>
+                                        </div>
+                                        <!-- <div class="col-xs-6">
+                                            <div class="image-category"><span>{{image.category}}</span></div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div></a>
                     </div>
                 </div>

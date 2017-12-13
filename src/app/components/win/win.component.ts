@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class WinComponent implements OnInit {
 
   sponsors: any[] = [
-    {image: "assets/img/sponsors/1.jpg", title: "test", url: "http://test.com"},
-    {image: "assets/img/sponsors/1.jpg", title: "test", url: "http://test.com"},
-    {image: "assets/img/sponsors/1.jpg", title: "test", url: "http://test.com"},
-    {image: "assets/img/sponsors/1.jpg", title: "test", url: "http://test.com"},
-    {image: "assets/img/sponsors/1.jpg", title: "test", url: "http://test.com"},
-    {image: "assets/img/sponsors/1.jpg", title: "test", url: "http://test.com"},
+    {image: "assets/img/sponsors/aa.png", title: "albert a marais attorneys", url: ""},
+    {image: "assets/img/sponsors/coming.jpg", title: "", url: "/contact"},
+    {image: "assets/img/sponsors/re.jpg", title: "royal elephant hoten & conference", url: "http://www.royalelephant.co.za/"},
+    {image: "assets/img/sponsors/tb.jpg", title: "the boys couture", url: "http://www.theboys.co.za/"},
+    {image: "assets/img/sponsors/ww.jpg", title: "win a wedding", url: "/win"},
+    {image: "assets/img/sponsors/coming.jpg", title: "", url: "/contact"},
   ];
 
   exhibitors: any[] = [
-    {name: "Royal Elephant Hotel & Conference Centre", text: "On the banks of the Hennops River in Centurion, The Royal Elephant exemplifies tasteful North African elegance combined with exceptional attention to detail.", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" },
+    {name: "Royal Elephant Hotel & Conference Centre", text: "On the banks of the Hennops River in Centurion, The Royal Elephant exemplifies tasteful North African elegance combined with exceptional attention to detail.", image: "assets/img/galleries/main/1.jpg", url: "http://www.royalelephant.co.za/" },
     // {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" }   
   ];
 
@@ -62,5 +62,15 @@ export class WinComponent implements OnInit {
       };
     }
     return {};
+  }
+
+  giefImages(imageurl: string): any {
+    return {
+      'background': 'url("' + imageurl + '") no-repeat center center',  
+      '-webkit-background-size': 'cover',
+      '-moz-background-size': 'cover',
+      '-o-background-size': 'cover',
+      'background-size': 'cover'
+    };
   }
 }

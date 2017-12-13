@@ -281,6 +281,8 @@ hr.style-one {
 
 .sp-name {
   text-align: right;
+  padding-top: 1px;
+  font-size: 10.5px;
   span {
     color: black;
     padding-bottom: 5px;
@@ -301,7 +303,7 @@ hr.style-one {
 .image-name {
   text-align: left;
   padding: 3px;
-  color: #d6d6d6;
+  color: black;
 }
 
 .image-category {

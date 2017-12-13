@@ -43,7 +43,30 @@
       <div class="sponsors-inner">
         <div class="row">
           <div class="col-md-4 col-xs-6" *ngFor="let sponsor of sponsors">
-            <a href="{{sponsor.url}}" target="_blank"><img class="sponsor-image" src="{{sponsor.image}}"></a>
+              <a href="{{sponsor.url}}"><div class="image-block" [ngStyle]="giefImages(sponsor.image)">
+                  <div *ngIf="sponsor.title">
+                      <div *ngIf="sponsor.sponsored" class="sp-box">
+                          <div class="row">
+                              <div class="col-xs-5">
+                                  <div class="sp">SPONSORED</div>
+                              </div>
+                              <div class="col-xs-7">
+                                  <div class="sp-name"><span>{{sponsor.sponsored.name}}</span></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div *ngIf="!sponsor.sponsored" class="sp-box">
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="image-name">{{sponsor.title}}</div>
+                              </div>
+                              <!-- <div class="col-xs-6">
+                                  <div class="image-category"><span>{{image.category}}</span></div>
+                              </div> -->
+                          </div>
+                      </div>
+                  </div>
+              </div></a>
           </div>
         </div>
       </div>

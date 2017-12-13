@@ -33,8 +33,8 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="about-image" [ngStyle]="giefImages('assets/img/person1.jpg')">
-                                <div class="image-black-box">
+                            <div class="about-image" [ngStyle]="giefImages('assets/img/about1.jpg')">
+                                <!-- <div class="image-black-box">
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <div class="image-name">white rose</div>
@@ -43,20 +43,10 @@
                                             <div class="image-category"><span>flowy dresses</span></div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <div class="about-image" [ngStyle]="giefImages('assets/img/person2.jpg')">
-                                <div class="sp-box">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="sp">SPONSORED</div>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div class="sp-name"><span>Jane Doe Media</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <a href="mailto:info@wedding-expo.co.za"><div class="about-image" [ngStyle]="giefImages('assets/img/contact.jpg')">
+                            </div></a>
                         </div>
                     </div>
                 </div>
@@ -74,22 +64,22 @@
                             <a (click)="imageClicked(image.id)"><div class="image-block" [ngStyle]="giefImages(image.url)">
                                 <div *ngIf="image.sponsored" class="sp-box">
                                     <div class="row">
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-5">
                                             <div class="sp">SPONSORED</div>
                                         </div>
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-7">
                                             <div class="sp-name"><span>{{image.sponsored.name}}</span></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div *ngIf="!image.sponsored" class="image-black-box">
+                                <div *ngIf="!image.sponsored" class="sp-box">
                                     <div class="row">
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-12">
                                             <div class="image-name">{{image.title}}</div>
                                         </div>
-                                        <div class="col-xs-6">
+                                        <!-- <div class="col-xs-6">
                                             <div class="image-category"><span>{{image.category}}</span></div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div></a>

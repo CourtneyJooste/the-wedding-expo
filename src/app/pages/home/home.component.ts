@@ -22,25 +22,25 @@ export class HomeComponent implements OnInit {
 
   image_thumbs: any[] = [
     {
-      url: "assets/img/galleries/home/one.jpg", 
-      title: 'one',
-      category: "rings",
+      url: "assets/img/win/7.jpg", 
+      title: 'win a wedding competition',
+      category: "win",
       id: 0,
     },
     {
-      url: "assets/img/galleries/home/two.jpg", 
-      title: 'two',
-      category: "dresses",
-      id: 1,
-    },
-    {
-      url: "assets/img/galleries/home/three.jpg", 
+      url: "assets/img/bliss.jpg", 
       title: 'three',
       category: "stuff",
       id: 2,
       sponsored: {
-        name: "Alicia Photography"
+        name: "www.blissfloralcreations.com"
       }
+    },
+    {
+      url: "assets/img/ex-ct.jpg", 
+      title: 'exhibitor stand cape town',
+      category: "stands",
+      id: 1,
     }
   ];
   images_loaded: boolean = false;
