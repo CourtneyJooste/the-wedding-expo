@@ -42,7 +42,7 @@
       <br><hr class="style-one">
       <div class="sponsors-inner">
         <div class="row">
-          <div class="col-md-4 col-xs-6" *ngFor="let sponsor of sponsors">
+          <div class="col-md-4 col-xs-12" *ngFor="let sponsor of sponsors">
               <a href="{{sponsor.url}}"><div class="image-block" [ngStyle]="giefImages(sponsor.image)">
                   <div *ngIf="sponsor.title">
                       <div *ngIf="sponsor.sponsored" class="sp-box">
