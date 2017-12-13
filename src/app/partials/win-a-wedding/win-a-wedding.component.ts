@@ -12,8 +12,8 @@ export class WinAWeddingComponent implements OnInit {
   images: string [] = [
     "assets/img/win/1.jpg",
     "assets/img/win/2.jpg",
-    "assets/img/win/3.jpg",
-    "assets/img/win/4.jpg",
+    // "assets/img/win/3.jpg",
+    // "assets/img/win/4.jpg",
     "assets/img/win/5.jpg",
     "assets/img/win/6.jpg",
     "assets/img/win/7.jpg"

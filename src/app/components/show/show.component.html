@@ -29,7 +29,7 @@
             <p>{{exhibitor.text}}</p>
           </div>
           <div class="ex-button">
-            <a target="_blank" href="{{exhibitor.url}}"><button mat-raised-button color="primary">want to participate</button></a>
+            <a target="_blank" href="{{exhibitor.url}}"><button mat-raised-button color="primary">{{exhibitor.button}}</button></a>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@
             <p>{{competition.text}}</p>
           </div>
           <div class="ex-button" *ngIf="competition.url">
-            <button mat-raised-button routerLink="/contact" color="primary">want to participate?</button>
+            <button mat-raised-button routerLink="/contact" color="primary">{{competition.button}}</button>
           </div>
         </div>
       </div>
