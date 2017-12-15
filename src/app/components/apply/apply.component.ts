@@ -51,7 +51,7 @@ export class ApplyComponent implements OnInit {
     navigation: true,
     autoplay: true,
     loop: true,
-    autoplayTimeout:7500,
+    autoplayTimeout:15000,
     responsiveClass:true,
     responsive: {
       0 : {

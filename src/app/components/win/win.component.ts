@@ -10,7 +10,7 @@ export class WinComponent implements OnInit {
   sponsors: any[] = [
     {image: "assets/img/sponsors/aa.png", title: "albert a marais attorneys", url: ""},
     {image: "assets/img/sponsors/coming.jpg", title: "", url: "/contact"},
-    {image: "assets/img/sponsors/re.jpg", title: "royal elephant hoten & conference", url: "http://www.royalelephant.co.za/"},
+    {image: "assets/img/sponsors/re.jpg", title: "royal elephant hotel & conference", url: "http://www.royalelephant.co.za/"},
     {image: "assets/img/sponsors/tb.jpg", title: "the boys couture", url: "http://www.theboys.co.za/"},
     {image: "assets/img/sponsors/ww.jpg", title: "win a wedding", url: "/win"},
     {image: "assets/img/sponsors/coming.jpg", title: "", url: "/contact"},
