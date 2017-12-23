@@ -86,11 +86,31 @@ export class ApplyComponent implements OnInit {
   selectedCategory: String = '';
 
   categories: String[] = [
-    "Dresses",
-    "Banking",
-    "China",
-    "Words",
-    "Lorem Ipsum"
+    "Cakes & Chocolates",
+    "Decor",
+    "Floral Design",
+    "Event Planning Specialist",
+    "Photographer",
+    "Videographer",
+    "Photo Booth",
+    "Bridal Gowns",
+    "Bridesmaids",
+    "Suits",
+    "Accessories",
+    "Beauty",
+    "Hair Makeup",
+    "Venue",
+    "Catering",
+    "Bar Services",
+    "DJ & Entertainment",
+    "To hire",
+    "Celebrant",
+    "Legal",
+    "Jewellery",
+    "Honeymoon",
+    "Registries",
+    "Stationery ",
+    "Other",
   ];
 
   selectedExpo: String = '';
@@ -111,6 +131,7 @@ export class ApplyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.categories = this.categories.sort();
   }
 
   getBg(imageurl: string): any {
