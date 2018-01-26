@@ -211,7 +211,7 @@ export class ApplyComponent implements OnInit {
         interested,
         opted
       };
-      emailjs.send("mailjet", "twe", mail_options)
+      emailjs.send("mailgun", "twe", mail_options)
       .then(function(response) {
         
         that.email = '';

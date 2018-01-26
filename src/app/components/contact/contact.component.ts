@@ -77,7 +77,7 @@ export class ContactComponent implements OnInit {
         cell,
         "subtitle": msg,
       };
-      emailjs.send("mailjet", "twe", mail_options)
+      emailjs.send("mailgun", "twe", mail_options)
         .then(response => {        
           that.email = '';
           that.name = '';
