@@ -1,12 +1,12 @@
 html, body, material-app, mat-sidenav-container, .my-content {
     margin: 0;
-    width: 100%;
+    width: 100vw !important;
     // background: #222;
-    background: linear-gradient(45deg, white, silver);
+    background: #E8B0B6;
     min-height: 100%;
-  
+    overflow-y: auto;
   }
-  
+
   .showOnMobile {
       display: none;
   }
@@ -14,12 +14,12 @@ html, body, material-app, mat-sidenav-container, .my-content {
   .my-sidenav {
     padding: 20px;
   }
-  
+
   .navbar-icon {
     z-index: 5;
     color: black;
   }
-  
+
   .navbar-inner{
     width: 100%;
     padding-top: 7px;
@@ -33,7 +33,7 @@ html, body, material-app, mat-sidenav-container, .my-content {
   .mat-toolbar {
       height: 80px;
   }
-  
+
   .navbar-button{
     color: white;
     text-align: center;

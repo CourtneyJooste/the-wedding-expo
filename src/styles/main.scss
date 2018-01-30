@@ -1,7 +1,5 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
-@import "~owl.carousel/dist/assets/owl.carousel.css";
-@import "./../assets/vendor/owl.theme.css";
 
 @font-face {
   font-family: 'Prosto';
@@ -35,6 +33,13 @@ h1 {
   font-size: 4.8em;
 }
 
+html, body {
+    overflow-x: hidden !important;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 html, body {
   font-family: 'Prosto', sans-serif !important;
@@ -60,7 +65,7 @@ $color-5: adjust-hue($color-1, 160deg);
   // background: #222;
   background: linear-gradient(45deg, white, silver);
   transition: all 0.3s;
-  
+
 }
 
 .loader-wrapper {
@@ -79,7 +84,7 @@ $color-5: adjust-hue($color-1, 160deg);
   border-radius: 50%;
   margin: 72px auto;
   position: relative;
-	
+
   transform: translateZ(0);
 }
 
@@ -98,73 +103,73 @@ $color-5: adjust-hue($color-1, 160deg);
   0% {
 		opacity: 1;
     transform: rotate(90deg);
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0 -0.83em 0 -0.42em $color-2, 
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0 -0.83em 0 -0.42em $color-2,
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
   }
-	
+
   2.5%,
   47.5% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0 -0.83em 0 -0.42em $color-2, 
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0 -0.83em 0 -0.42em $color-2,
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
   }
-	
+
   5%,
   29% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			-0.087em -0.825em 0 -0.42em $color-2, 
-			-0.173em -0.812em 0 -0.44em $color-3, 
-			-0.256em -0.789em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			-0.087em -0.825em 0 -0.42em $color-2,
+			-0.173em -0.812em 0 -0.44em $color-3,
+			-0.256em -0.789em 0 -0.46em $color-4,
 			-0.297em -0.775em 0 -0.477em $color-5;
   }
-	
+
   10% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			-0.338em -0.758em 0 -0.42em $color-2, 
-			-0.555em -0.617em 0 -0.44em $color-3, 
-			-0.671em -0.488em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			-0.338em -0.758em 0 -0.42em $color-2,
+			-0.555em -0.617em 0 -0.44em $color-3,
+			-0.671em -0.488em 0 -0.46em $color-4,
 			-0.749em -0.34em 0 -0.477em $color-5;
   }
-	
+
   19% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			-0.377em -0.74em 0 -0.42em $color-2, 
-			-0.645em -0.522em 0 -0.44em $color-3, 
-			-0.775em -0.297em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			-0.377em -0.74em 0 -0.42em $color-2,
+			-0.645em -0.522em 0 -0.44em $color-3,
+			-0.775em -0.297em 0 -0.46em $color-4,
 			-0.82em -0.09em 0 -0.477em $color-5;
   }
-	
+
 	50% {
 		opacity: 1;
 		 transform: rotate(450deg);
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
 			0 -0.83em 0 -0.42em $color-2,
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
-		
+
 	}
-	
+
 	51%,
 	100% {
 		opacity: 0;
     transform: rotate(450deg);
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
 			0 -0.83em 0 -0.42em $color-2,
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
   }
 }
@@ -174,71 +179,71 @@ $color-5: adjust-hue($color-1, 160deg);
 	49% {
 		opacity: 0;
     transform: rotate(-90deg);
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0 -0.83em 0 -0.42em $color-2, 
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0 -0.83em 0 -0.42em $color-2,
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
   }
-	
+
 	50% {
 		opacity: 1;
     transform: rotate(-90deg);
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0 -0.83em 0 -0.42em $color-2, 
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0 -0.83em 0 -0.42em $color-2,
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
 }
-	
+
   52.5%,
   97.5% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0 -0.83em 0 -0.42em $color-2, 
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0 -0.83em 0 -0.42em $color-2,
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
   }
-	
+
   55%,
   79% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0.087em -0.825em 0 -0.42em $color-2, 
-			0.173em -0.812em 0 -0.44em $color-3, 
-			0.256em -0.789em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0.087em -0.825em 0 -0.42em $color-2,
+			0.173em -0.812em 0 -0.44em $color-3,
+			0.256em -0.789em 0 -0.46em $color-4,
 			0.297em -0.775em 0 -0.477em $color-5;
   }
-	
+
   60% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0.338em -0.758em 0 -0.42em $color-2, 
-			0.555em -0.617em 0 -0.44em $color-3, 
-			0.671em -0.488em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0.338em -0.758em 0 -0.42em $color-2,
+			0.555em -0.617em 0 -0.44em $color-3,
+			0.671em -0.488em 0 -0.46em $color-4,
 			0.749em -0.34em 0 -0.477em #ffffff;
   }
-	
+
   79% {
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
-			0.377em -0.74em 0 -0.42em $color-2, 
-			0.645em -0.522em 0 -0.44em $color-3, 
-			0.775em -0.297em 0 -0.46em $color-4, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
+			0.377em -0.74em 0 -0.42em $color-2,
+			0.645em -0.522em 0 -0.44em $color-3,
+			0.775em -0.297em 0 -0.46em $color-4,
 			0.82em -0.09em 0 -0.477em $color-5;
   }
 
 	100% {
 		opacity: 1;
     transform: rotate(-450deg);
-    box-shadow: 
-			0 -0.83em 0 -0.4em $color-1, 
+    box-shadow:
+			0 -0.83em 0 -0.4em $color-1,
 			0 -0.83em 0 -0.42em $color-2,
-			0 -0.83em 0 -0.44em $color-3, 
-			0 -0.83em 0 -0.46em $color-4, 
+			0 -0.83em 0 -0.44em $color-3,
+			0 -0.83em 0 -0.46em $color-4,
 			0 -0.83em 0 -0.477em $color-5;
   }
 }
@@ -323,7 +328,7 @@ hr.style-one {
   text-align: center;
 }
 
-.faq-container{  
+.faq-container{
     background-color: rgb(255, 255, 255);
     padding-top: 60px;
     padding-bottom: 100px;
@@ -337,7 +342,7 @@ hr.style-one {
 
 .faq-lower {
     text-align: left;
-    padding-top: 60px; 
+    padding-top: 60px;
     font-size: 17px;
     margin: 0 auto;
     max-width: 900px;
@@ -361,45 +366,44 @@ hr.style-one {
     text-align: center;
 }
 
-/* Turn on custom 8px wide scrollbar */
-::-webkit-scrollbar {
-  width: 8px; /* 1px wider than Lion. */
-  /* This is more usable for users trying to click it. */
-  background-color: rgba(0,0,0,0);
-  -webkit-border-radius: 100px;
-}
-/* hover effect for both scrollbar area, and scrollbar 'thumb' */
-::-webkit-scrollbar:hover {
-  background-color: rgba(0, 0, 0, 0.09);
-}
+    // /* Turn on custom 8px wide scrollbar */
+    // ::-webkit-scrollbar {
+    //   width: 8px; /* 1px wider than Lion. */
+    //   /* This is more usable for users trying to click it. */
+    //   background-color: rgba(0,0,0,0);
+    //   -webkit-border-radius: 100px;
+    // }
+    // /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+    // ::-webkit-scrollbar:hover {
+    //   background-color: rgba(0, 0, 0, 0.09);
+    // }
 
-/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-::-webkit-scrollbar-thumb:vertical {
-  /* This is the EXACT color of Mac OS scrollbars. 
-     Yes, I pulled out digital color meter */
-  background: rgba(0,0,0,0.5);
-  -webkit-border-radius: 100px;
-}
-::-webkit-scrollbar-thumb:vertical:active {
-  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
-  -webkit-border-radius: 100px;
-}
-
+    // /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+    // ::-webkit-scrollbar-thumb:vertical {
+    //   /* This is the EXACT color of Mac OS scrollbars.
+    //      Yes, I pulled out digital color meter */
+    //   background: rgba(0,0,0,0.5);
+    //   -webkit-border-radius: 100px;
+    // }
+    // ::-webkit-scrollbar-thumb:vertical:active {
+    //   background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+    //   -webkit-border-radius: 100px;
+    // }
 
 @media (max-width: 1600px) {
-  
+
 
 }
 
 @media (max-width: 1400px) {
-  
+
   h1 {
     font-size: 4em;
   }
 }
 
 @media (max-width: 1200px) {
-  
+
 
 }
 
@@ -410,7 +414,7 @@ hr.style-one {
 }
 
 @media (max-width: 900px) {
-   
+
   h1 {
     font-size: 3.4em;
   }
@@ -418,14 +422,14 @@ hr.style-one {
 }
 
 @media (max-width: 700px) {
-  
-   
+
+
   h1 {
     font-size: 3em;
   }
 }
 
 @media (max-width: 500px) {
-  
+
 
 }

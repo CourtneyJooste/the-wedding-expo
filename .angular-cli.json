@@ -24,7 +24,9 @@
                 "./styles/covalent-theming.scss",
                 "./../node_modules/font-awesome/css/font-awesome.css",
                 "./../node_modules/sweetalert2/dist/sweetalert2.min.css",
-                "./../node_modules/prismjs/themes/prism-okaidia.css"
+                "./../node_modules/prismjs/themes/prism-okaidia.css",
+                "./../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+                "./assets/vendor/owl.theme.css"
             ],
             "scripts": [
                 "./../node_modules/sweetalert2/dist/sweetalert2.min.js"
