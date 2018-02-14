@@ -9,46 +9,49 @@ export class WinComponent implements OnInit {
 
   sponsors: any[] = [
     {image: "assets/img/sponsors/aa.png", title: "albert a marais attorneys", url: ""},
-    {image: "assets/img/sponsors/coming.jpg", title: "", url: "/contact"},
+    {image: "assets/img/sponsors/bb.jpg", title: "blushing bridesmaids", url: "https://www.facebook.com/blushingbridesmaids/"},
     {image: "assets/img/sponsors/re.jpg", title: "royal elephant hotel & conference", url: "http://www.royalelephant.co.za/"},
     {image: "assets/img/sponsors/tb.jpg", title: "the boys couture", url: "http://www.theboys.co.za/"},
     {image: "assets/img/sponsors/ww.jpg", title: "win a wedding", url: "/win"},
-    {image: "assets/img/sponsors/coming.jpg", title: "", url: "/contact"},
+    {image: "assets/img/sponsors/fanaa.jpg", title: "house of fanaa", url: "https://www.facebook.com/houseoffanaa/"},
+    {image: "assets/img/sponsors/ido.jpg", title: "i do creative", url: "http://www.i-do.co.za/"},
+    {image: "assets/img/sponsors/kita.jpg", title: "kita fragrances", url: "https://kitafragrances.com/"},
+    {image: "assets/img/sponsors/ryno.jpg", title: "makeup by ryno", url: "https://www.facebook.com/MakeupByRyno/"},
   ];
 
   exhibitors: any[] = [
     {name: "Royal Elephant Hotel & Conference Centre", text: "On the banks of the Hennops River in Centurion, The Royal Elephant exemplifies tasteful North African elegance combined with exceptional attention to detail.", image: "assets/img/galleries/main/1.jpg", url: "http://www.royalelephant.co.za/" },
-    // {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" }   
+    // {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" }
   ];
 
   past_winners: any[] = [
     {
-      image: "assets/img/winners/1.jpg", 
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-      names: "MATTHEW & MARISSA JONES", 
+      image: "assets/img/winners/1.jpg",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      names: "MATTHEW & MARISSA JONES",
       when: "2016 winners"
     },
     {
-      image: "assets/img/winners/2.jpg", 
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-      names: "Claudette Graham", 
+      image: "assets/img/winners/2.jpg",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      names: "Claudette Graham",
       when: "2015 winner"
     },
     {
-      image: "assets/img/winners/3.jpg", 
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-      names: "HOMER & MARGE SIMPSON", 
+      image: "assets/img/winners/3.jpg",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      names: "HOMER & MARGE SIMPSON",
       when: "2014 winners"
     },
   ];
 
   selectedWinner: any = {
-    image: "assets/img/winners/1.jpg", 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-    names: "MATTHEW & MARISSA JONES", 
+    image: "assets/img/winners/1.jpg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    names: "MATTHEW & MARISSA JONES",
     when: "2016 winners"
   };
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -66,7 +69,7 @@ export class WinComponent implements OnInit {
 
   giefImages(imageurl: string): any {
     return {
-      'background': 'url("' + imageurl + '") no-repeat center center',  
+      'background': 'url("' + imageurl + '") no-repeat center center',
       '-webkit-background-size': 'cover',
       '-moz-background-size': 'cover',
       '-o-background-size': 'cover',

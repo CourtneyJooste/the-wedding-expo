@@ -14,6 +14,7 @@ import { CovalentFileModule } from '@covalent/core';
 import { CovalentChipsModule } from '@covalent/core';
 import { CovalentLoadingModule } from '@covalent/core';
 import { CovalentDialogsModule } from '@covalent/core';
+import { CovalentExpansionPanelModule } from '@covalent/core';
 
 const elements = [
   CovalentCommonModule,
@@ -28,7 +29,8 @@ const elements = [
   CovalentFileModule,
   CovalentChipsModule,
   CovalentLoadingModule,
-  CovalentDialogsModule
+  CovalentDialogsModule,
+  CovalentExpansionPanelModule
 ];
 
 @NgModule({

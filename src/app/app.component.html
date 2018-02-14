@@ -1,24 +1,52 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<mat-sidenav-container>
+<!-- <mat-sidenav-container>
 <mat-sidenav mode="over" #sidenav class="my-sidenav"><app-navbar-sm [sidenav]="sidenav"></app-navbar-sm></mat-sidenav>
 
-<div class="my-content animated fadeIn">
+
+</mat-sidenav-container> -->
+
+<div>
     <div class="hideOnMobile">
         <app-navbar></app-navbar>
     </div>
     <div class="showOnMobile">
-        <mat-toolbar color="primary" style="background-color: #e0aeb2" class="unselectable">
-            <div class="navbar-inner">
-                <button mat-icon-button class="navbar-icon" (click)="sidenav.open()">
-                    <mat-icon>more_vert</mat-icon>
-                </button>
-                <div class="navbar-button">
-                    <button mat-button class="centered" routerLink="/">the wedding expo</button>
-                </div>
+        <td-expansion-panel disableRipple #mobileNav>
+            <ng-template td-expansion-panel-header>
+                <mat-toolbar color="primary" style="background-color: #e0aeb2" >
+                    <div class="navbar-inner">
+                        <mat-icon style="line-height: 55px;" >more_vert</mat-icon>
+
+                        <!-- <div class="navbar-button">
+                            the wedding expo
+                        </div> -->
+                        <div class="nav-img">
+                            <img src="assets/img/twe2.png" style="width: 100%; height: auto; max-width: 120px;">
+                        </div>
+                    </div>
+                </mat-toolbar>
+            </ng-template>
+            <div class="mobile-inner">
+                <button mat-button (click)="mobileNav.close()" routerLink="/">home</button><br>
+                <button mat-button (click)="mobileNav.close()" routerLink="/visit-expo">visit expo</button><br>
+                <button mat-button (click)="mobileNav.close()" routerLink="/win">win a wedding</button><br>
+                <button mat-button (click)="mobileNav.close()" routerLink="/apply">apply to exhibit</button><br>
+                <button mat-button (click)="mobileNav.close()" routerLink="/gallery">gallery</button><br>
+                <button mat-button (click)="mobileNav.close()" routerLink="/show">at the show</button><br>
+                <button mat-button (click)="mobileNav.close()" routerLink="/contact">contact us</button>
             </div>
-        </mat-toolbar>
+        </td-expansion-panel>
     </div>
+    <!-- <mat-toolbar color="primary" style="background-color: #e0aeb2" class="unselectable">
+        <div class="navbar-inner">
+            <button mat-icon-button class="navbar-icon" (click)=>
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <div class="navbar-button">
+                <button mat-button class="centered" routerLink="/">the wedding expo</button>
+            </div>
+        </div>
+    </mat-toolbar> -->
     <div class="nav-padder">
         <router-outlet>
 
@@ -26,5 +54,3 @@
     </div>
     <app-footer></app-footer>
 </div>
-
-</mat-sidenav-container>

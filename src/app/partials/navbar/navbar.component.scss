@@ -27,3 +27,19 @@
         }
     }
 }
+
+.navbar-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    width: 200px;
+    padding-left: 20px;
+}
+
+
+@media (max-width: 1360px) {
+    .navbar-left {
+        display: none;
+    }
+}

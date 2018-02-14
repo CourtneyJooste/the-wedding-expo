@@ -1,4 +1,4 @@
-html, body, material-app, mat-sidenav-container, .my-content {
+html, body, material-app, .my-content {
     margin: 0;
     width: 100vw !important;
     // background: #222;
@@ -7,9 +7,10 @@ html, body, material-app, mat-sidenav-container, .my-content {
     overflow-y: auto;
   }
 
-  .showOnMobile {
-      display: none;
-  }
+// *** This is what breaks it LOL but fixes horizontal mini scroll ***
+//   .my-content {
+//       overflow-x: hidden;
+//   }
 
   .my-sidenav {
     padding: 20px;
@@ -22,12 +23,20 @@ html, body, material-app, mat-sidenav-container, .my-content {
 
   .navbar-inner{
     width: 100%;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    line-height: 52px;
     position: relative;
     mat-icon.mat-icon.material-icons {
         color: white;
     }
+  }
+
+  .nav-img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-bottom: 7px;
+    position: absolute;
   }
 
   .mat-toolbar {
@@ -37,19 +46,19 @@ html, body, material-app, mat-sidenav-container, .my-content {
   .navbar-button{
     color: white;
     text-align: center;
-    padding-top: 5px;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 4;
   }
 
+  .mobile-inner {
+      padding: 5px;
+      text-align: center;
+      .mat-button {
+          width: 100%;
+          text-align: center;
+      }
+  }
 
-@media (max-width:875px) { /* small size */
-    .showOnMobile {
-        display: block;
-    }
-    .hideOnMobile {
-        display: none;
-    }
-}
+
