@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UpcomingExposComponent implements OnInit {
 
   expos: any[] = [
-    {name: "Johannesburg", location: "Ticketpro Dome", dates: "10 & 11 march 2018", details: "Price: <b>R120.00</b> per person<br>R30 per child (2 to 10 years)", button: "buy tickets", link: "https://weddingexpo.nutickets.co.za/March"},
+    {name: "Johannesburg", location: "Ticketpro Dome", dates: "10 & 11 march 2018", details: "Price: <b>R120.00</b> per person<br>R30 per child (2 to 10 years)", button: "buy tickets", link: "https://weddingexpo.nutickets.co.za"},
 
     {name: "Cape Town", location: "CTICC", dates: "9 & 10 JUNE 2018", details: "Price: <b>R100.00</b> per person<br>R30 per child (2 to 10 years)", button: "buy tickets - t.b.a.", link: "#"},
 
