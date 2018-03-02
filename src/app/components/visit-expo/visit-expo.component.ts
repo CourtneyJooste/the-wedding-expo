@@ -7,6 +7,7 @@ import { ViewContainerRef } from '@angular/core';
 import { TdDialogService } from '@covalent/core';
 import { Router } from '@angular/router';
 import * as _ from 'lodash';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-visit-expo',
@@ -65,6 +66,8 @@ export class VisitExpoComponent implements OnInit {
   selectedExpo: any;
 
   searchboxText: string;
+
+  categories = [];
 
   constructor(private _dataTableService: TdDataTableService, public dataService: DataService, private _dialogService: TdDialogService,
   private _viewContainerRef: ViewContainerRef, private router: Router) {
@@ -211,6 +214,16 @@ export class VisitExpoComponent implements OnInit {
     filterByExpo(expo) {
         this.selectedExpo = expo;
         this.displayVendors = this.vendors.filter(v => v.expo_id === expo.id);
+        const categories = this.displayVendors.map(vendor => vendor.category);
+        console.log(categories);
+        const combinedCats = _.union.apply(_, categories);
+        const capCats = [];
+        for (let c of combinedCats) {
+            capCats.push(c = _.capitalize(c));
+        }
+        const uniqueCats = _.uniq(capCats);
+        console.log(uniqueCats);
+        this.categories = uniqueCats.sort();
         console.log(this.displayVendors);
         this.clear_button = true;
     }

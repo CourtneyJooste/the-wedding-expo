@@ -90,7 +90,15 @@
                 </div>
 
                 <div class="exhib-container">
+
                     <div *ngIf="(!!search_text && search_text.length > 0) || selectedExpo">
+                        <mat-form-field style="margin-bottom: 55px" *ngIf="categories">
+                            <mat-select placeholder="category">
+                                <mat-option *ngFor="let cat of categories" [value]="cat">
+                                {{ cat }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
                         <div class="vendor-item" *ngFor="let vendor of displayVendors" >
 
                                 <div class="rounded-shell row is-flex">
