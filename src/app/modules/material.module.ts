@@ -18,6 +18,7 @@ const elements = [
     MatIconModule,
     MatSlideToggleModule,
     MatAutocompleteModule,
+    MatProgressSpinnerModule,
     MatTabsModule
 ];
 

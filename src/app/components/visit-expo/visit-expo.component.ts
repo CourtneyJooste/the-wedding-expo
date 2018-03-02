@@ -6,6 +6,7 @@ import * as moment from "moment";
 import { ViewContainerRef } from '@angular/core';
 import { TdDialogService } from '@covalent/core';
 import { Router } from '@angular/router';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-visit-expo',
@@ -55,13 +56,26 @@ export class VisitExpoComponent implements OnInit {
   clickable: boolean = true;
   selectedRows: any[] = [];
   sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
+  expos: any[];
+  vendors: any[];
+  search_text: string;
+  filteredExpos: any[];
+  displayVendors: any[];
+  clear_button = false;
+  selectedExpo: any;
+
+  searchboxText: string;
 
   constructor(private _dataTableService: TdDataTableService, public dataService: DataService, private _dialogService: TdDialogService,
   private _viewContainerRef: ViewContainerRef, private router: Router) {
     this.loading = true;
     dataService.getVendors().then(success => {
         this.data = success.vendors;
-        console.log( this.data);
+        this.vendors = _.sortBy(success.vendors, 'name_english');
+        this.expos = success.expos;
+        this.filteredExpos = this.filterExpos(this.expos);
+        console.log( this.vendors);
+        console.log( this.filteredExpos);
         this.filteredData = this.data;
         this.filteredTotal = this.filteredData.length;
         this.loading = false;
@@ -134,5 +148,71 @@ export class VisitExpoComponent implements OnInit {
     newData = this._dataTableService.pageData(newData, this.fromRow, this.currentPage * this.pageSize);
     this.filteredData = newData;
   }
+
+    showDate(input: string): string {
+        return moment(input).format('Do MMMM YYYY')
+    }
+
+    resetFilter(): void {
+        this.displayVendors = _.cloneDeep(this.vendors);
+        if (!this.selectedExpo) {
+            this.clear_button = false;
+        }
+    }
+
+    filterVendors(ev: any): void {
+        // console.log(event);
+
+        // Reset items back to all of the items
+        this.resetFilter();
+
+        // set val to the value of the searchbar
+        const val = this.search_text;
+
+        try {
+            // if the value is an empty string don't filter the items
+            if (val && val.trim() !== '') {
+                this.displayVendors = this.vendors
+                    .filter(v => v.name_english !== null)
+                    .filter(v => v.name_english
+                                .toLowerCase()
+                                .indexOf(val.toLowerCase()) > -1)
+                    .filter(v => this.selectedExpo ? v.expo_id === this.selectedExpo.id : true);
+                    this.clear_button = true;
+            } else {
+                this.resetFilter();
+            }
+        } catch (ex) {
+            console.log("error:", ex);
+            console.log("value: " + val);
+        }
+    }
+
+    resetFully() {
+        this.selectedExpo = null;
+        this.search_text = '';
+        this.resetFilter();
+    }
+
+    filterUpcomingExpos(expos: any[]) {
+        return _.sortBy([ ...expos ]
+            .filter(expo => {
+                const endDate = moment(expo.date_end);
+                const today = moment();
+                const twoDaysAgo = today.subtract(2, 'days');
+                return endDate > twoDaysAgo;
+            }), "date_start");
+    }
+
+    filterExpos(expos: any[]) {
+        return _.sortBy([ ...expos ], "date_start");
+    }
+
+    filterByExpo(expo) {
+        this.selectedExpo = expo;
+        this.displayVendors = this.vendors.filter(v => v.expo_id === expo.id);
+        console.log(this.displayVendors);
+        this.clear_button = true;
+    }
 
 }

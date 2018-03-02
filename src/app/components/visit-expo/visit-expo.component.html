@@ -20,7 +20,7 @@
       </div>
     </div>
     <app-upcoming-expos></app-upcoming-expos>
-    <div class="exhibitors hideOnMobile">
+    <div class="exhibitors">
       <div class="container-fluid">
         <h1>exhibitors</h1>
         <br><hr class="style-one">
@@ -29,7 +29,7 @@
           watch this space!
         </div> -->
         <div class="container" style="padding-top: 30px;">
-            <div class="card-lg animated fadeIn" *ngIf="!loading">
+            <!-- <div class="card-lg animated fadeIn" *ngIf="!loading">
               <div layout="row" layout-align="start center" class="pad-left-sm pad-right-sm">
                 <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
                   <span class="md-title">Our Exhibitors</span>
@@ -50,7 +50,6 @@
                   </button>
                 </mat-menu>
               </div>
-              <!-- <mat-divider></mat-divider> -->
               <hr>
               <div><td-data-table
                 #dataTable
@@ -77,14 +76,99 @@
                 </mat-select>
                 {{pagingBar.range}} <span hide-xs>of {{pagingBar.total}}</span>
               </td-paging-bar>
-            </div>
+            </div> -->
 
-            <div class="loading" *ngIf="loading">
-              <mat-spinner></mat-spinner>
-            </div>
+
+            <div class="animated fadeIn" *ngIf="!loading">
+                <div class="search-top">
+                    <input class="search-box" placeholder="search" [(ngModel)]="search_text" name="st" (ngModelChange)="filterVendors($event)">
+                    <div *ngIf="clear_button" class="inline-clear">
+                        <button mat-icon-button color="primary" (click)="resetFully()">
+                            <mat-icon aria-label="clear">clear</mat-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="exhib-container">
+                    <div *ngIf="(!!search_text && search_text.length > 0) || selectedExpo">
+                        <div class="vendor-item" *ngFor="let vendor of displayVendors" >
+
+                                <div class="rounded-shell row is-flex">
+                                    <div class="col-lg-3 col-sm-5 left-half">
+                                        <!--[style.background-image]="'url(' + vendor.image_landscape + ')'"-->
+                                        <!--style="background-image: url('{{vendor.image_landscape || 'assets/images/placeholder.png'}})"-->
+                                        <div class="image-container">
+                                            <img [src]="vendor.image_landscape + '?q=85&w=800' || 'assets/images/placeholder.png'" alt="" class="vendor-image">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-sm-7 right-half">
+                                        <ul class="rh-inner">
+
+                                            <li class="vendor-heading">
+                                                <b>{{vendor.name_english}}</b>
+                                            </li>
+                                            <li class="vendor-category" *ngIf="vendor.category">
+                                                {{vendor.category}}
+                                            </li>
+                                            <li class="expo-location">
+                                                {{vendor.expo_name}}
+                                            </li>
+                                            <li class="vendor-link">
+                                                <a class="vendor-url" href="{{vendor.url_website}}">{{vendor.url_website}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            <!-- <div class='card-lg'>
+                                <h2 class="expo-list-name">{{vendor.name_english}}</h2>
+
+                                <div class="vendor-category" *ngIf="vendor.category">
+                                    <span *ngFor="let c of vendor.category; let last = last">
+                                        {{c}}<span *ngIf="!last">, </span>
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div *ngIf="displayVendors ? displayVendors.length <= 0 : true" class="row">
+                                No Exhibitors at this expo yet!
+                        </div>
+                    </div>
+
+                    <div *ngIf="(search_text === undefined || search_text === null
+                    || search_text === '') && !selectedExpo">
+
+                        <div *ngIf="!!expos" class="animated bounceInUp">
+                            <div class="exhibitor-list-filtered">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3" *ngFor="let expo of filteredExpos" (click)="filterByExpo(expo)">
+
+                                        <div class="rounded-shell">
+                                            <div class='top-half'>
+
+                                                <div class="image-container">
+                                                    <img [src]="expo.url_logo + '?q=85&w=1200' || 'assets/images/placeholder.png'" alt="" class="vendor-image">
+                                                </div>
+                                            </div>
+                                            <div class='bottom-half'>
+                                                <h2 class="expo-list-name">{{expo.name_english}}</h2>
+                                                <p class="expo-list-date">{{expo.location_name}}</p>
+                                                <p class="expo-list-date">{{showDate(expo.date_start)}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <!-- <div>
               <button mat-raised-button color="primary" (click)="deleteVendor()">Delete</button>
             </div> -->
+          </div>
+          <div class="loading" *ngIf="loading">
+            <mat-spinner></mat-spinner>
           </div>
 
 
