@@ -8,20 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class WinComponent implements OnInit {
 
   sponsors: any[] = [
-    {image: "assets/img/sponsors/aa.png", title: "albert a marais attorneys", url: ""},
-    {image: "assets/img/sponsors/bb.jpg", title: "blushing bridesmaids", url: "https://www.facebook.com/blushingbridesmaids/"},
-    {image: "assets/img/sponsors/re.jpg", title: "royal elephant hotel & conference", url: "http://www.royalelephant.co.za/"},
-    {image: "assets/img/sponsors/tb.jpg", title: "the boys couture", url: "http://www.theboys.co.za/"},
-    {image: "assets/img/sponsors/ww.jpg", title: "win a wedding", url: "/win"},
-    {image: "assets/img/sponsors/fanaa.jpg", title: "house of fanaa", url: "https://www.facebook.com/houseoffanaa/"},
-    {image: "assets/img/sponsors/ido.jpg", title: "i do creative", url: "http://www.i-do.co.za/"},
-    {image: "assets/img/sponsors/kita.jpg", title: "kita fragrances", url: "https://kitafragrances.com/"},
-    {image: "assets/img/sponsors/ryno.jpg", title: "makeup by ryno", url: "https://www.facebook.com/MakeupByRyno/"},
+    {image: "assets/img/sponsors/aa.png", title: "albert a marais attorneys", url: "", category: "A.N.C Contract"},
+    {image: "assets/img/sponsors/bb.jpg", title: "bridesmaids boxes", url: "https://www.facebook.com/blushingbridesmaids/", category: "Bridesmaids dresses"},
+    {image: "assets/img/sponsors/re.jpg", title: "royal elephant hotel & conference", url: "http://www.royalelephant.co.za/", category: "Venue"},
+    {image: "assets/img/sponsors/tb.jpg", title: "the boys couture", url: "http://www.theboys.co.za/", category: "Wedding Dresses"},
+    {image: "assets/img/sponsors/ww.jpg", title: "win a wedding", url: "/win", category: "Competitions"},
+    {image: "assets/img/sponsors/fanaa.jpg", title: "house of fanaa", url: "https://www.facebook.com/houseoffanaa/", category: "Cutlery Hire"},
+    {image: "assets/img/sponsors/ido.jpg", title: "i do creative", url: "http://www.i-do.co.za/", category: "Stationery"},
+    {image: "assets/img/sponsors/kita.jpg", title: "kita fragrances", url: "https://kitafragrances.com/", category: "Fragrances"},
+    {image: "assets/img/sponsors/ryno.jpg", title: "makeup by ryno", url: "https://www.facebook.com/MakeupByRyno/", category: "Makeup"},
+    {image: "assets/img/sponsors/fu.jpg", title: "forever us photography", url: "http://forever-us.co.za/", category: "Videography"},
+    {image: "assets/img/sponsors/rl.jpg", title: "rapid lash", url: "http://rapidlash.co.za/", category: "Gift Sets"},
+    {image: "assets/img/sponsors/hc.jpg", title: "hayley clift photography", url: "http://www.hayleycliftphotography.co.za/", category: "Photography"},
   ];
 
   exhibitors: any[] = [
     {name: "Royal Elephant Hotel & Conference Centre", text: "On the banks of the Hennops River in Centurion, The Royal Elephant exemplifies tasteful North African elegance combined with exceptional attention to detail.", image: "assets/img/galleries/main/1.jpg", url: "http://www.royalelephant.co.za/" },
-    // {name: "exhibitor name", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor", image: "assets/img/workshops/ws1.jpg", url: "http://test.com" }
+    {name: "AfricaStay", text: "AfricaStay is sponsoring the honeymoon to Zanzibar. Choose peace of mind by using AfricaStay to plan your holiday in Africa & The Indian Ocean.", image: "assets/img/sponsors/afristay.jpg", url: "http://www.africastay.co.za/" }
   ];
 
   past_winners: any[] = [

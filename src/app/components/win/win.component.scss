@@ -1,7 +1,7 @@
 .win-banner {
     min-height: calc(100vh - 120px);
     background-color: #333333;
-    background: url('./../../../assets/img/bg1.jpg') no-repeat center 20% fixed; 
+    background: url('./../../../assets/img/bg1.jpg') no-repeat center 20% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -63,6 +63,15 @@
     // box-shadow: 0 25px 20px -21px rgba(0,0,0,0.57);
 }
 
+.sp-category {
+
+    color: black;
+    font-size: 10px;
+    text-align: left;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
 .image-block, .about-image {
     &:hover{
         .image-black-box, .sp-box{
@@ -114,6 +123,9 @@
     color: white;
     max-width: 700px;
     margin: 0 auto;
+    a {
+        color: #fe1d78 !important;
+    }
 }
 
 .exhibitor-details {
@@ -191,7 +203,7 @@
         font-size: 14px;
     }
 }
-  
+
 .winner-text {
    font-size: 16px;
    margin-bottom: 15px;
