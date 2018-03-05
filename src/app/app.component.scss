@@ -61,4 +61,16 @@ html, body, material-app, .my-content {
       }
   }
 
+  .subscribe-bar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background: #d2a5a8;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      a {
+          color: white !important;
+      }
+  }
+
 

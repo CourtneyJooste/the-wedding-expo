@@ -12,7 +12,8 @@ export class AppComponent implements OnInit {
   title = 'app';
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
-  
+  has_closed = false;
+
   constructor(private router: Router, private location: Location) { }
 
   ngOnInit() {
