@@ -18,16 +18,6 @@ import { setTimeout } from 'timers';
 })
 export class VisitExpoComponent implements OnInit {
 
-  questions: any[] = [
-    {title: "one.", question: "question", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed."},
-
-    {title: "two.", question: "question", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed."},
-
-    {title: "three.", question: "question", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed."},
-
-    {title: "four.", question: "question", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis neque libero, eu placerat quam aliquet sed."}
-  ];
-
    columns: ITdDataTableColumn[] = [
     { name: 'name_english',  label: 'Name', sortable: true, width: {min: 180 }},
     { name: 'expo_name', label: 'Expo', filter: true, sortable: true, width: {min: 200 }},
@@ -44,19 +34,19 @@ export class VisitExpoComponent implements OnInit {
 
   filteredData: any[];
   filteredTotal: number;
-  loading: boolean = true;
+  loading = true;
 
-  menuOpenX: number = 0;
-  menuOpenY: number = 0;
+  menuOpenX = 0;
+  menuOpenY = 0;
 
-  searchTerm: string = '';
-  fromRow: number = 1;
-  currentPage: number = 1;
-  pageSize: number = 10;
-  sortBy: string = 'name_english';
-  selectable: boolean = true;
-  multiple: boolean = true;
-  clickable: boolean = true;
+  searchTerm = '';
+  fromRow = 1;
+  currentPage = 1;
+  pageSize = 10;
+  sortBy = 'name_english';
+  selectable = true;
+  multiple = true;
+  clickable = true;
   selectedRows: any[] = [];
   sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   expos: any[];
@@ -95,13 +85,13 @@ export class VisitExpoComponent implements OnInit {
   }
 
   extractExpos(expos) {
-    let _expos = this.myExpos;
+    const _expos = this.myExpos;
     // console.log(_expos);
-    let __expos = expos.filter(function(ex){
+    const __expos = expos.filter(function(ex){
       return _expos.includes(ex.id);
     });
-    let eArr = [];
-    for(let e of __expos) {
+    const eArr = [];
+    for (const e of __expos) {
       eArr.push(e.name_english);
     }
     return eArr;
@@ -145,7 +135,7 @@ export class VisitExpoComponent implements OnInit {
 
   filter(): void {
     let newData: any[] = this.data;
-    let excludedColumns: string[] = this.columns
+    const excludedColumns: string[] = this.columns
     .filter((column: ITdDataTableColumn) => {
       return ((column.filter === undefined && column.hidden === true) ||
               (column.filter !== undefined && column.filter === false));
@@ -172,7 +162,7 @@ export class VisitExpoComponent implements OnInit {
     }
 
     filterVendors(ev: any): void {
-        console.log(event);
+        // console.log(event);
 
         // Reset items back to all of the items
         this.resetFilter();
@@ -186,16 +176,11 @@ export class VisitExpoComponent implements OnInit {
                 this.displayVendors = this.vendors
                     .filter(v => v.name_english !== null)
                     .filter(v => {
-                        console.log("????");
                         if (this.selectedCat) {
-                            console.log("?2");
-                            console.log(v.category);
                             const capCats = [];
                             for (const c of v.category) {
                                 capCats.push(_.capitalize(c));
                             }
-                            console.log("?3");
-                            console.log(capCats);
                             return capCats.includes(this.selectedCat);
                         }
                         return true;
@@ -239,16 +224,13 @@ export class VisitExpoComponent implements OnInit {
         this.selectedExpo = expo;
         this.displayVendors = this.vendors.filter(v => v.expo_id === expo.id);
         const categories = this.displayVendors.map(vendor => vendor.category);
-        console.log(categories);
         const combinedCats = _.union.apply(_, categories);
         const capCats = [];
-        for (let c of combinedCats) {
+        for (const c of combinedCats) {
             capCats.push(_.capitalize(c));
         }
         const uniqueCats = _.uniq(capCats);
-        console.log(uniqueCats);
         this.categories = uniqueCats.sort();
-        console.log(this.displayVendors);
         this.clear_button = true;
     }
 
