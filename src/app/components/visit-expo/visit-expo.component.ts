@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, EventEmitter } from '@angular/core';
 import { DataService } from "../../services/data.service";
 import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/core';
@@ -6,8 +6,10 @@ import * as moment from "moment";
 import { ViewContainerRef } from '@angular/core';
 import { TdDialogService } from '@covalent/core';
 import { Router } from '@angular/router';
+import {MatSelectChange} from '@angular/material';
 import * as _ from 'lodash';
 import { $ } from 'protractor';
+import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-visit-expo',
@@ -66,6 +68,7 @@ export class VisitExpoComponent implements OnInit {
   selectedExpo: any;
 
   searchboxText: string;
+  selectedCat: string;
 
   categories = [];
 
@@ -85,6 +88,10 @@ export class VisitExpoComponent implements OnInit {
         // this.filter();
     });
 
+  }
+
+  changeValue($event: EventEmitter<MatSelectChange>) {
+    this.filterVendors(null);
   }
 
   extractExpos(expos) {
@@ -153,18 +160,19 @@ export class VisitExpoComponent implements OnInit {
   }
 
     showDate(input: string): string {
-        return moment(input).format('Do MMMM YYYY')
+        return moment(input).format('Do MMMM YYYY');
     }
 
     resetFilter(): void {
         this.displayVendors = _.cloneDeep(this.vendors);
         if (!this.selectedExpo) {
             this.clear_button = false;
+            return;
         }
     }
 
     filterVendors(ev: any): void {
-        // console.log(event);
+        console.log(event);
 
         // Reset items back to all of the items
         this.resetFilter();
@@ -174,12 +182,27 @@ export class VisitExpoComponent implements OnInit {
 
         try {
             // if the value is an empty string don't filter the items
-            if (val && val.trim() !== '') {
+            if ((val && val.trim() !== '') || this.selectedCat) {
                 this.displayVendors = this.vendors
                     .filter(v => v.name_english !== null)
-                    .filter(v => v.name_english
+                    .filter(v => {
+                        console.log("????");
+                        if (this.selectedCat) {
+                            console.log("?2");
+                            console.log(v.category);
+                            const capCats = [];
+                            for (const c of v.category) {
+                                capCats.push(_.capitalize(c));
+                            }
+                            console.log("?3");
+                            console.log(capCats);
+                            return capCats.includes(this.selectedCat);
+                        }
+                        return true;
+                    })
+                    .filter(v => val ? v.name_english
                                 .toLowerCase()
-                                .indexOf(val.toLowerCase()) > -1)
+                                .indexOf(val.toLowerCase()) > -1 : true)
                     .filter(v => this.selectedExpo ? v.expo_id === this.selectedExpo.id : true);
                     this.clear_button = true;
             } else {
@@ -194,6 +217,7 @@ export class VisitExpoComponent implements OnInit {
     resetFully() {
         this.selectedExpo = null;
         this.search_text = '';
+        this.selectedCat = '';
         this.resetFilter();
     }
 
@@ -219,7 +243,7 @@ export class VisitExpoComponent implements OnInit {
         const combinedCats = _.union.apply(_, categories);
         const capCats = [];
         for (let c of combinedCats) {
-            capCats.push(c = _.capitalize(c));
+            capCats.push(_.capitalize(c));
         }
         const uniqueCats = _.uniq(capCats);
         console.log(uniqueCats);
