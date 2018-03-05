@@ -30,4 +30,19 @@ export class DataService {
         });
     }
 
+    subscribe(email, list): Promise<any> {
+        return new Promise((resolve, reject) => {
+
+            const body = {
+                email,
+                list
+            };
+            this.http.post(this.API_URL + "/v2/expos/subscribe", body).toPromise().then(response => {
+                resolve(response.json());
+            }).catch(ex => {
+                reject(ex.json());
+            });
+        });
+    }
+
 }

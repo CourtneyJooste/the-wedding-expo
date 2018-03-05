@@ -1,5 +1,5 @@
 .pre-footer {
-    background-color: #d2a5a8;
+    background-color: #e2b3b7;
     color: #fefcfc;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -16,17 +16,65 @@
 .footer {
     background-color: #e2b3b7;
     color: #fefcfc;
-    padding-top: 30px;
     padding-bottom: 30px;
 }
 
 .footer-inner {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 30px;
     max-width: 1600px;
-    height: 40px;
+    height: 70px;
     margin: 0 auto;
     font-size: 15px;
+}
+//E6ABB1
+.subscribe-outer {
+    background: #d2a5a8;
+}
+
+.cb-inner {
+
+  margin: 5px 12px 5px 12px;
+}
+
+.subscribe-inner {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.white-input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid white;
+    padding: 20px;
+    color: white;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: white;
+    }
+
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+    }
+    outline: none !important;
+}
+
+.checkboxes-outer {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid white;
+    padding: 20px;
+    // p {
+    //     text-align: left;
+    // }
 }
 
 .social-icons {

@@ -16,6 +16,7 @@ const elements = [
     MatDialogModule,
     MatRadioModule,
     MatIconModule,
+    MatRadioModule,
     MatSlideToggleModule,
     MatAutocompleteModule,
     MatProgressSpinnerModule,

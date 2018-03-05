@@ -5,6 +5,36 @@
       </div>
     </a>
     <div class="footer">
+        <div class="subscribe-outer">
+            <div class="subscribe-inner container">
+                <h2>get the inside scoop</h2>
+                <h4>get notified by email when something changes</h4><br>
+                <form>
+                    <div class="row checkboxes-outer">
+                    <p>who are you?</p>
+                    <mat-radio-group [(ngModel)]="subType" name="st">
+
+                        <!-- <div class="col-sm-4"> -->
+                            <mat-radio-button [value]="s.id" *ngFor="let s of subTypes" class="cb-inner" color="primary">
+                                {{s.value}}
+                            </mat-radio-button>
+                        <!-- </div> -->
+                    </mat-radio-group></div>
+                    <div class="row">
+                    <!-- <mat-form-field class="full-width"> -->
+                        <input class="white-input" placeholder="your email address" value="" [(ngModel)]="email" name="email">
+                    <!-- </mat-form-field> -->
+                    </div>
+                    <div class="row">
+                        <div style="padding: 40px 10px 30px 10px; text-align: center;">
+                            <button mat-raised-button color="primary" [disabled]="sending" (click)="subscribe()">
+                                <span *ngIf="sending"><i class="fa fa-circle-o-notch fa-spin "></i></span> sign me up
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
       <div class="footer-inner">
         <div style="float: left; padding-top: 15px; padding-bottom: 15px;">
           <span>A division of The Wedding Group. Copyright &copy; {{this_year}} The Wedding Expo</span>
