@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Output } from '@angular/core';	
+import { Component, OnInit, ViewChild, Output } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EventEmitter } from '@angular/core';
 
@@ -35,49 +35,49 @@ export class GalleryComponent implements OnInit {
 
   image_thumbs: any[] = [
     {
-      url: "assets/img/galleries/main/1.jpg", 
+      url: "assets/img/galleries/main/1.jpg",
       title: 'royal elephant hotel & conference centre',
       category: "win",
       id: 0,
     },
     {
-      url: "assets/img/sponsors/tb.jpg", 
+      url: "assets/img/sponsors/tb.jpg",
       title: 'the boys couture',
       category: "win",
       id: 1,
     },
     {
-      url: "assets/img/galleries/main/3.jpg", 
+      url: "assets/img/galleries/main/3.jpg",
       title: 'cape town fashion show',
       category: "win",
       id: 2,
     },
     {
-      url: "assets/img/galleries/main/4.jpg", 
+      url: "assets/img/galleries/main/4.jpg",
       title: 'joburg wedding expo',
       category: "win",
       id: 3,
     },
     {
-      url: "assets/img/galleries/main/5.jpg", 
+      url: "assets/img/galleries/main/5.jpg",
       title: 'durban exhibitor stand',
       category: "win",
       id: 4,
     },
     {
-      url: "assets/img/galleries/main/6.jpg", 
+      url: "assets/img/galleries/main/6.jpg",
       title: 'cake tasting competition',
       category: "win",
       id: 5,
     },
     {
-      url: "assets/img/win/7.jpg", 
+      url: "assets/img/win/7.jpg",
       title: 'win a wedding competition',
       category: "win",
       id: 6,
     },
     {
-      url: "assets/img/bliss.jpg", 
+      url: "assets/img/bliss.jpg",
       title: 'three',
       category: "stuff",
       id: 7,
@@ -86,16 +86,34 @@ export class GalleryComponent implements OnInit {
       }
     },
     {
-      url: "assets/img/ex-ct.jpg", 
+      url: "assets/img/ex-ct.jpg",
       title: 'exhibitor stand cape town',
       category: "stands",
       id: 8,
+    },
+    {
+      url: "assets/img/sponsors/fanaa.jpg",
+      title: 'house of fanaa',
+      category: "cutlery hire",
+      id: 9,
+    },
+    {
+      url: "assets/img/sponsors/ido.jpg",
+      title: 'i do creative',
+      category: "stationery",
+      id: 10,
+    },
+    {
+      url: "assets/img/sponsors/kita.jpg",
+      title: 'kita fragrances',
+      category: "fragrances",
+      id: 11,
     }
   ];
 
   images_loaded: boolean = false;
 
-  constructor(public router: Router) { 
+  constructor(public router: Router) {
   }
 
   ngOnInit() {
@@ -110,7 +128,7 @@ export class GalleryComponent implements OnInit {
       this.ngxImageGallery.open(i);
     }
   }
-  
+
 
   changed($event){
     console.log($event);
@@ -135,7 +153,7 @@ export class GalleryComponent implements OnInit {
 
   giefImages(imageurl: string): any {
     return {
-      'background': 'url("' + imageurl + '") no-repeat center center',  
+      'background': 'url("' + imageurl + '") no-repeat center center',
       '-webkit-background-size': 'cover',
       '-moz-background-size': 'cover',
       '-o-background-size': 'cover',
