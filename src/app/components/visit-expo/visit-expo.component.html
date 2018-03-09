@@ -89,17 +89,24 @@
                     </div>
                 </div>
 
+                <div *ngIf="(!!search_text && search_text.length > 0) || selectedExpo" style="margin: 30px 0 30px 0">
+                    <mat-form-field *ngIf="categories && displayVendors ? displayVendors.length > 0 : false">
+                        <mat-select placeholder="category" [(ngModel)]="selectedCat" name="catsel" (change)="changeValue($event)">
+                            <mat-option>All</mat-option>
+                            <mat-option *ngFor="let cat of categories" [value]="cat">
+                            {{ cat }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 30px;">
+            <div class="animated fadeIn" *ngIf="!loading">
                 <div class="exhib-container">
 
                     <div *ngIf="(!!search_text && search_text.length > 0) || selectedExpo">
-                        <mat-form-field style="margin-bottom: 55px" *ngIf="categories && displayVendors ? displayVendors.length > 0 : false">
-                            <mat-select placeholder="category" [(ngModel)]="selectedCat" name="catsel" (change)="changeValue($event)">
-                                <mat-option>All</mat-option>
-                                <mat-option *ngFor="let cat of categories" [value]="cat">
-                                {{ cat }}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
                         <div class="vendor-item" *ngFor="let vendor of displayVendors" >
 
                                 <div class="rounded-shell row is-flex">
