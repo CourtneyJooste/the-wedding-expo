@@ -12,7 +12,7 @@ export class WinComponent implements OnInit {
     {image: "assets/img/sponsors/bb.jpg", title: "bridesmaids boxes", url: "https://www.facebook.com/blushingbridesmaids/", category: "Bridesmaids dresses"},
     {image: "assets/img/sponsors/re.jpg", title: "royal elephant hotel & conference", url: "http://www.royalelephant.co.za/", category: "Venue"},
     {image: "assets/img/sponsors/tb.jpg", title: "the boys couture", url: "http://www.theboys.co.za/", category: "Wedding Dresses"},
-    {image: "assets/img/sponsors/ww.jpg", title: "win a wedding", url: "/win", category: "Competitions"},
+    {image: "assets/img/sponsors/afristay2.jpg", title: "win a wedding", url: "/win", category: "Competitions"},
     {image: "assets/img/sponsors/fanaa.jpg", title: "house of fanaa", url: "https://www.facebook.com/houseoffanaa/", category: "Cutlery Hire"},
     {image: "assets/img/sponsors/ido.jpg", title: "i do creative", url: "http://www.i-do.co.za/", category: "Stationery"},
     {image: "assets/img/sponsors/kita.jpg", title: "kita fragrances", url: "https://kitafragrances.com/", category: "Fragrances"},
