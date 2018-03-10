@@ -1,7 +1,7 @@
 .win-banner {
     min-height: calc(100vh - 120px);
     background-color: #333333;
-    // background: url('./../../../assets/img/bg1.jpg') no-repeat center 20% fixed; 
+    // background: url('./../../../assets/img/bg1.jpg') no-repeat center 20% fixed;
     // -webkit-background-size: cover;
     // -moz-background-size: cover;
     // -o-background-size: cover;
@@ -20,6 +20,10 @@
     margin: 0 auto;
 
     h1 {
+        color: #ee2a7b;
+        letter-spacing: 4px;
+    }
+    h2 {
         color: #ee2a7b;
         letter-spacing: 4px;
     }
